@@ -1,0 +1,32 @@
+<resources>
+  <string name="app_name">国泰安全管理</string>
+  <string name="title_home">首页</string>
+  <string name="title_count">统计</string>
+  <string name="title_user">我的</string>
+  <string name="title_message">消息</string>
+ <string name="update">升级</string>
+  <!--排查方式-->
+  <string-array name = "hidenMode">
+    <item>综合检查</item>
+    <item>专项检查</item>
+    <item>季节检查</item>
+    <item>节假日及重大节日检查</item>
+    <item>日常检查</item>
+    <item>上级部门检查</item>
+  </string-array>
+  <!--隐患类别-->
+  <string-array name = "hidenType">
+    <item>现场管理</item>
+    <item>基础管理</item>
+  </string-array>
+  <!--隐患级别-->
+  <string-array name ="hidenLevel">
+    <item>一般</item>
+    <!--<item>重大</item>-->
+  </string-array>
+  <!--整改类型-->
+  <string-array name ="abarType">
+    <item>立即整改</item>
+    <item>限期整改</item>
+  </string-array>
+</resources>

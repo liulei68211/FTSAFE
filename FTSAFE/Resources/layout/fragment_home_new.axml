@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+			app:titleTextAppearance = "@style/Toolbar.TitleText"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+	<ScrollView 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:scrollbars="none"
+		android:layout_marginTop = "50dp"
+		android:layout_marginBottom = "15dp"
+		android:id="@+id/containerView">
+		<RelativeLayout   
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/relativeView">
+			<!--图片-->
+			<ImageView
+				android:layout_width = "match_parent"
+				android:layout_height = "145dp"
+				android:src="@drawable/nav"
+				android:id="@+id/imgView1"/>
+			<TextView 
+				android:layout_width = "match_parent"
+				android:layout_height = "35dp"
+				android:layout_marginTop ="-6dp"
+				android:background = "#1A3755"
+				android:paddingLeft ="20dp"
+				android:layout_below = "@+id/imgView1"
+				android:textColor = "#ffffff"
+				android:textSize ="12sp"
+				android:gravity = "left|center"
+				android:text = "济源市丰田肥业有限公司，王小涛，2019年11月12日"
+				android:id="@+id/txtMsg"/>
+			<GridLayout 
+				android:id="@+id/GridLayout1"
+				android:layout_below ="@+id/txtMsg"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:columnCount="4"
+				android:orientation="horizontal"
+				android:rowCount="1">
+				<!--日常工作-->
+				<TextView  
+					android:layout_columnSpan="4"
+					android:layout_gravity="fill"
+					android:text="日常工作"
+					android:textColor="#332F30"
+					android:paddingTop ="10dp"
+					android:paddingBottom ="10dp"
+					android:paddingLeft ="20dp"
+					android:textSize="16sp" />
+				<View  
+					android:layout_columnSpan="4"
+					android:layout_marginLeft ="15dp"
+					android:layout_marginRight ="15dp"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:background="#D6D7D7"  />  
+				<TextView
+					android:id="@+id/bt_0"
+					android:layout_column = "0"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:text ="122"
+					android:textColor ="#000"
+					android:gravity ="center"
+					android:textSize ="20sp"
+					android:layout_width = "58dp"
+					android:layout_height ="58dp"
+					android:clickable ="true"
+					android:background = "@drawable/imageButton"/>
+				<TextView
+					android:id="@+id/bt_1"
+					android:layout_width = "58dp"
+					android:layout_height ="58dp"
+					android:background = "@drawable/imageButton"
+					android:layout_column = "1"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:textSize ="20sp"
+					android:text ="182"
+					android:clickable ="true"
+					android:textColor ="#000"/>
+				<TextView
+					android:id="@+id/bt_2"
+					android:layout_column = "2"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:text ="12"
+					android:textSize ="20sp"
+					android:textColor ="#000"
+					android:gravity ="center"
+					android:layout_width = "58dp"
+					android:layout_height ="58dp"
+					android:clickable ="true"
+					android:background = "@drawable/imageButton"/>
+				<TextView
+					android:id="@+id/bt_3"
+					android:layout_column = "3"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="10dp"
+					android:layout_gravity ="center"
+					android:gravity ="center"
+					android:text ="126"
+					android:textSize ="20sp"
+					android:textColor ="#ffffff"
+				    android:layout_width = "58dp"
+					android:layout_height ="58dp"
+					android:clickable ="true"
+					android:background = "@drawable/imageButton2"/>
+				<TextView
+					android:layout_column = "0"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="已上报"/>
+				<TextView
+					android:layout_column = "1"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="待整改"/>
+				<TextView
+					android:layout_column = "2"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="待复查"/>
+				<TextView
+					android:layout_column = "3"
+					android:layout_columnWeight = "1"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:layout_marginTop ="5dp"
+					android:text ="已完成"/>
+   			</GridLayout>
+			<!--日常巡查-->
+			<GridLayout 
+				android:id="@+id/GridLayout2"
+				android:layout_below ="@id/GridLayout1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:columnCount="4"
+				android:orientation="horizontal"
+				android:rowCount="1">			
+				<TextView  
+					android:layout_columnSpan="4"
+					android:layout_gravity="fill"
+					android:text="日常巡查"
+					android:textColor="#332F30"
+					android:layout_marginTop ="15dp"
+					android:paddingBottom ="10dp"
+					android:paddingLeft ="20dp"
+					android:textSize="16sp" />
+				<View  
+					android:layout_columnSpan="4"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginLeft ="15dp"
+					android:layout_marginRight ="15dp"
+					android:background="#D6D7D7"  />  
+				<!--第er行-->
+				<ImageButton
+					android:id="@+id/img_safe_partol"
+					android:layout_column = "0"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:background ="@drawable/partol_1"/>
+				<ImageButton
+					android:id="@+id/img_partol_add"
+					android:layout_column = "1"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:background ="@drawable/partol_2"/>
+				<ImageButton
+					android:id="@+id/img_equi_partol"
+					android:layout_width = "wrap_content"
+					android:layout_height = "wrap_content"
+					android:layout_column = "2"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:background ="@drawable/partol_3"/>
+				<ImageButton
+					android:id="@+id/img_partol_record"
+					android:layout_column = "3"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="15dp"
+					android:layout_gravity ="center"
+					android:enabled = "true"
+					android:background="@drawable/hiden_6"/>
+				<TextView
+					android:layout_column = "0"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="安全确认"/>
+				<TextView
+					android:layout_column = "1"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="风险巡查"/>
+				<TextView
+					android:layout_column = "2"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="设备巡查"/>
+				<TextView
+					android:layout_column = "3"
+					android:layout_columnWeight = "1"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:layout_marginTop ="5dp"
+					android:text ="巡查记录"/>
+   			</GridLayout>
+			<!--隐患排查-->
+			<GridLayout 
+				android:id="@+id/GridLayout3"
+				android:layout_below ="@id/GridLayout2"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:columnCount="4"
+				android:orientation="horizontal"
+				android:rowCount="2">			
+				<TextView  
+					android:layout_columnSpan="4"
+					android:layout_gravity="fill"
+					android:text="隐患排查"
+					android:textColor="#332F30"
+					android:layout_marginTop ="15dp"
+					android:paddingBottom ="10dp"
+					android:paddingLeft ="20dp"
+					android:textSize="16sp" />
+				<View  
+					android:layout_columnSpan="4"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginLeft ="15dp"
+					android:layout_marginRight ="15dp"
+					android:background="#D6D7D7"  />  
+				<!--第一行-->
+				<ImageButton
+					android:id="@+id/img_hiden_add"
+					android:layout_column = "0"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:background ="@drawable/hiden_1"/>
+				<ImageButton
+					android:id="@+id/img_hiden_reform"
+					android:layout_column = "1"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:background ="@drawable/hiden_2"/>
+				<ImageButton
+					android:id="@+id/img_hiden_check"
+					android:layout_width = "wrap_content"
+					android:layout_height = "wrap_content"
+					android:layout_column = "2"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:background ="@drawable/hiden_3"/>
+				<ImageButton
+					android:id="@+id/img_hiden_end"
+					android:layout_column = "3"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="10dp"
+					android:layout_gravity ="center"
+					android:background ="@drawable/hiden_4"/>
+				<TextView
+					android:layout_column = "0"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="隐患录入"/>
+				<TextView
+					android:layout_column = "1"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="隐患整改"/>
+				<TextView
+					android:layout_column = "2"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="整改确认"/>
+				<TextView
+					android:layout_column = "3"
+					android:layout_columnWeight = "1"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:layout_marginTop ="5dp"
+					android:text ="隐患复查"/>
+				<!--第二行-->
+				<ImageButton
+					android:id="@+id/img_hiden_search"
+					android:layout_column = "0"
+					android:layout_marginTop ="15dp"
+					android:layout_columnWeight = "1"
+					android:layout_gravity = "center"
+					android:enabled = "true"
+					android:background="@drawable/hiden_7"/>
+				<ImageButton
+					android:id="@+id/img_hiden_audit"
+					android:layout_column = "1"
+					android:layout_marginTop ="15dp"
+					android:layout_columnWeight = "1"
+					android:layout_gravity = "center"
+					android:enabled = "true"
+					android:background="@drawable/auit"/>
+				<ImageButton
+					android:id="@+id/img_hiden_big"
+					android:layout_column = "2"
+					android:layout_marginTop ="15dp"
+					android:layout_columnWeight = "1"
+					android:layout_gravity = "center"
+					android:enabled = "true"
+					android:background="@drawable/other_4"/>
+				<TextView
+					android:layout_column = "0"
+					android:layout_columnWeight = "1"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:layout_marginTop ="5dp"
+					android:text ="隐患查询"/>
+				<TextView
+					android:layout_column = "1"
+					android:layout_columnWeight = "1"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:layout_marginTop ="5dp"
+					android:text ="隐患审核"/>
+				<TextView
+					android:layout_column = "2"
+					android:layout_columnWeight = "1"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:layout_marginTop ="5dp"
+					android:text ="重大隐患录入"/>
+   			</GridLayout>
+			<!--其它应用-->
+			<GridLayout 
+				android:id="@+id/GridLayout4"
+				android:layout_below ="@id/GridLayout3"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="15dp"
+				android:columnCount="4"
+				android:orientation="horizontal"
+				android:rowCount="1">			
+				<TextView  
+					android:layout_columnSpan="4"
+					android:layout_gravity="fill"
+					android:text="其它功能"
+					android:textColor="#332F30"
+					android:layout_marginTop ="15dp"
+					android:paddingBottom ="10dp"
+					android:paddingLeft ="20dp"
+					android:textSize="16sp" />
+				<View  
+					android:layout_columnSpan="4"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginLeft ="15dp"
+					android:layout_marginRight ="15dp"
+					android:background="#D6D7D7"  />  
+				<!--第er行-->
+				<ImageButton
+					android:id="@+id/img_hiden_danger"
+					android:layout_column = "0"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:background ="@drawable/other_1"/>
+				<ImageButton
+					android:id="@+id/img_hiden_list"
+					android:layout_column = "1"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:background ="@drawable/other_2"/>
+				<ImageButton
+					android:id="@+id/img_hiden_control"
+					android:layout_column = "2"
+					android:layout_columnWeight = "1"
+					android:layout_gravity ="center"
+					android:layout_marginTop ="10dp"
+					android:background ="@drawable/other_3"/>
+					<ImageButton
+					android:id="@+id/img_ressim"
+					android:layout_column = "3"
+					android:layout_marginTop ="15dp"
+					android:layout_columnWeight = "1"
+					android:layout_gravity = "center"
+					android:background="@drawable/auit_2"/>
+				<TextView
+					android:layout_column = "0"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="风险告知卡"/>
+				<TextView
+					android:layout_column = "1"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="隐患排查清单"/>
+				<TextView
+					android:layout_column = "2"
+					android:layout_columnWeight = "1"
+					android:layout_marginTop ="5dp"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:text ="应急处置卡"/>
+				<TextView
+					android:layout_column = "3"
+					android:layout_columnWeight = "1"
+					android:textSize = "13sp"
+					android:gravity="center"
+					android:layout_marginTop ="5dp"
+					android:text ="相关制度"/>
+   			</GridLayout>
+		</RelativeLayout>
+	</ScrollView>
+</android.support.design.widget.CoordinatorLayout>

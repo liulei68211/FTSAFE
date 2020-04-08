@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<GridLayout 
+		android:id="@+id/gridLayout1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:columnCount ="2"
+		android:rowCount = "10">
+		<TextView	
+			android:id="@+id/txtOrderLabel"
+			android:gravity="center_vertical"
+			android:layout_marginTop = "5dp"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+			android:textColor="#000"
+			android:text ="序         号"/>
+		<TextView
+			android:id="@+id/txtOrder"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+			android:text ="1"/>
+		<TextView
+			android:id="@+id/txtStatusLabel"	
+			android:layout_marginTop = "5dp"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="16dp"
+			 android:textSize="16sp"
+			android:textColor="#000"
+			 android:text ="排查区域"/>
+		<TextView
+				android:id="@+id/txtArea"
+				android:gravity="center_vertical"
+				android:paddingLeft="16dp"
+				android:textSize = "16sp"
+				 android:layout_marginTop = "5dp"
+				android:ellipsize = "end"
+			android:ems = "10"
+				android:text="" />
+			<TextView
+				android:id="@+id/txtStatusLabel"	
+				 android:layout_marginTop = "5dp"
+				 android:gravity="center_vertical"
+				 android:paddingLeft="16dp"
+				 android:textSize="16sp"
+			android:textColor="#000"
+				 android:text ="检查对象"/>
+			<TextView
+				android:id="@+id/txtObj"
+				android:gravity="center_vertical"
+				android:paddingLeft="16dp"
+				android:textSize = "16sp"
+				 android:layout_marginTop = "5dp"
+				android:text="" />
+		<TextView
+			 android:id="@+id/txtPersonLabel"
+			 android:layout_marginTop = "5dp"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="16dp"
+			 android:textSize="16sp"
+			android:textColor="#000"
+			 android:text ="危害因素"/>
+		<TextView
+			android:id="@+id/txtDanger"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+			android:ellipsize = "end"
+			android:ems = "10"
+		    android:text =""/>
+			<TextView
+			 android:id="@+id/txtPersonLabel"
+			 android:layout_marginTop = "5dp"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="16dp"
+			 android:textSize="16sp"
+			android:textColor="#000"
+			
+			 android:text ="事故类型"/>
+		<TextView
+			android:id="@+id/txtStand"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+				android:ellipsize = "end"
+			android:ems = "10"
+		    android:text =""/>
+		<TextView
+			 android:id="@+id/txtPersonLabel"
+			 android:layout_marginTop = "5dp"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="16dp"
+			 android:textSize="16sp"
+			android:textColor="#000"
+			 android:text ="排查标准"/>
+		<TextView
+			android:id="@+id/txtControl"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+			android:ellipsize = "end"
+			android:ems = "10"
+		    android:text =""/>
+
+		<TextView
+			 android:id="@+id/txtPersonLabel"
+			 android:layout_marginTop = "5dp"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="16dp"
+			 android:textSize="16sp"
+			android:textColor="#000"
+			android:layout_marginBottom ="10dp"
+			 android:text ="风险级别"/>
+		<TextView
+			android:id="@+id/txtLevel"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+			android:layout_marginBottom ="10dp"
+		    android:text =""/>
+		</GridLayout>
+</LinearLayout>

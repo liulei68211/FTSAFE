@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<GridLayout 
+		android:id="@+id/gridLayout1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft = "10dp"
+		android:layout_marginRight = "10dp"
+		android:background = "#ffffff"
+		android:columnCount ="2"
+		android:rowCount = "10">
+		<TextView	
+			android:id="@+id/txtOrderLabel"
+			android:gravity="center_vertical"
+			android:layout_marginTop = "5dp"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+			android:text ="序         号"/>
+		<TextView
+			android:id="@+id/txtOrder"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+			android:text ="1"/>
+			<TextView
+				android:id="@+id/txtStatusLabel"	
+				 android:layout_marginTop = "5dp"
+				 android:gravity="center_vertical"
+				 android:paddingLeft="16dp"
+				 android:textSize="16sp"
+				 android:text ="隐患状态"/>
+			<TextView
+				android:id="@+id/txtStatus"
+				android:gravity="center_vertical"
+				android:paddingLeft="16dp"
+				android:textSize = "16sp"
+				 android:layout_marginTop = "5dp"
+				android:text="隐患状态" />
+		<TextView
+			 android:id="@+id/txtPersonLabel"
+			 android:layout_marginTop = "5dp"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="16dp"
+			 android:textSize="16sp"
+			 android:text ="排查     人"/>
+		<TextView
+			android:id="@+id/txtPerson"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+		    android:text ="排查人"/>
+			<TextView
+			 android:id="@+id/txtPersonLabel"
+			 android:layout_marginTop = "5dp"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="16dp"
+			 android:textSize="16sp"
+			 android:text ="排查单位"/>
+		<TextView
+			android:id="@+id/txtDept"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+		    android:text ="排查单位"/>
+		<TextView
+			 android:id="@+id/txtPersonLabel"
+			 android:layout_marginTop = "5dp"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="16dp"
+			 android:textSize="16sp"
+			 android:text ="排查日期"/>
+		<TextView
+			android:id="@+id/txtTime"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+		    android:text ="2019-09-06"/>
+
+		<TextView
+			 android:id="@+id/txtPersonLabel"
+			 android:layout_marginTop = "5dp"
+			 android:gravity="center_vertical"
+			 android:paddingLeft="16dp"
+			 android:textSize="16sp"
+			android:layout_marginBottom ="10dp"
+			 android:text ="隐患描述"/>
+		<TextView
+			android:id="@+id/txtInfo"
+			android:layout_marginTop = "5dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="16dp"
+			android:textSize="16sp"
+			android:layout_marginBottom ="10dp"
+		    android:text ="2019-09-06"/>
+	
+		</GridLayout>
+</LinearLayout>

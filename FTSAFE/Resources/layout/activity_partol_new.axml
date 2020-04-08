@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+				app:titleTextAppearance = "@style/Toolbar.TitleText"
+			app:subtitleTextAppearance = "@style/Toolbar.SubTitleText"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+<RelativeLayout
+		android:layout_marginTop = "55dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<GridLayout 
+			android:id="@+id/gridLayout1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginLeft = "30dp"
+			android:layout_marginRight = "30dp"
+			android:layout_marginTop="10dp"
+			android:layout_below="@+id/btDate"
+			android:columnCount ="2"
+			android:rowCount = "4">
+			<TextView
+				android:layout_width="wrap_content"
+			   android:layout_height="wrap_content"
+				android:text = "请先点击巡查签到按钮签到;巡查结果异常时请勾选小方框"
+				android:textColor = "#157DF5"
+				android:layout_columnSpan = "2"
+				 android:layout_marginTop = "5dp"
+				android:textSize="16sp"
+				android:lines="2"
+				android:ems = "12"
+				android:gravity = "left"/>
+			<TextView
+				 android:id="@+id/txt_partolUser"
+				 android:layout_height="45dp"
+				 android:gravity="center_vertical"
+				 android:textSize="15sp"
+				 android:textColor ="#000000"
+				 android:text ="巡查人"/>
+			<EditText
+				  android:id="@+id/editName"
+				 android:gravity="left"
+				 android:paddingLeft = "5dp"
+				 android:layout_gravity="fill"
+				 android:inputType="textPersonName"
+				 android:textSize="15sp"
+				android:textColor ="#818181"
+			    android:enabled = "false"
+				android:text="李四"
+			     android:layout_marginLeft = "15dp" />
+			<TextView
+				android:id="@+id/textDept"
+	           android:layout_height="45dp"
+				 android:gravity="center_vertical"
+				 android:textSize="15sp"
+				 android:textColor ="#000000"
+				android:text="所属单位" />
+			<EditText
+				  android:id="@+id/textDeptValue"
+				 android:gravity="left"
+			     android:enabled="false"
+				 android:paddingLeft = "5dp"
+				 android:layout_gravity="fill"
+				 android:inputType="textPersonName"
+				 android:textSize="15sp"
+				android:textColor ="#818181"
+			     android:layout_marginLeft = "15dp" />		
+			<TextView
+		      android:layout_height="45dp"
+				 android:gravity="center_vertical"
+				 android:textSize="15sp"
+				 android:textColor ="#000000"
+				android:text="巡查区域" />
+			<EditText
+				  android:id="@+id/textArea"
+				 android:gravity="left"
+			     android:enabled="false"
+				 android:paddingLeft = "5dp"
+				 android:layout_gravity="fill"
+				 android:inputType="textPersonName"
+				 android:textSize="15sp"
+				android:textColor ="#818181"
+			     android:layout_marginLeft = "15dp" />		
+			<TextView
+			      android:layout_height="45dp"
+				 android:gravity="center_vertical"
+				 android:textSize="15sp"
+				 android:textColor ="#000000"
+				android:text="巡查日期" />
+			<EditText
+				  android:id="@+id/txt_Time"
+				 android:gravity="left"
+			     android:enabled="false"
+				 android:paddingLeft = "5dp"
+				 android:layout_gravity="fill"
+				 android:inputType="textPersonName"
+				 android:textSize="15sp"
+				android:textColor ="#818181"
+			     android:layout_marginLeft = "15dp" />		
+		
+			<TextView
+			      android:layout_height="45dp"
+				 android:gravity="center_vertical"
+				 android:textSize="15sp"
+				 android:textColor ="#000000"
+				android:text="是否签到" />
+		<EditText
+				  android:id="@+id/txtSign"
+				 android:gravity="left"
+			     android:enabled="false"
+				 android:paddingLeft = "5dp"
+				 android:layout_gravity="fill"
+				 android:inputType="textPersonName"
+				 android:textSize="15sp"
+				android:textColor ="#818181"
+			     android:layout_marginLeft = "15dp" />		
+			<TextView
+			      android:layout_height="45dp"
+				 android:gravity="center_vertical"
+				 android:textSize="15sp"
+				 android:textColor ="#000000"
+				android:text="巡查结果" />
+			<CheckBox
+				android:id="@+id/check1"
+				android:paddingLeft="16dp"
+				android:textSize = "16sp"/>
+		</GridLayout>
+	<LinearLayout
+		android:id="@+id/linearBt"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_marginLeft ="30dp"
+		android:layout_marginRight ="30dp"
+		android:layout_marginBottom = "15dp"
+		android:layout_alignParentBottom = "true">
+		<Button
+			android:text="巡查签到"
+			android:layout_width = "wrap_content"
+			android:layout_height = "40dp"
+			android:layout_weight="0.5"
+			android:background = "@drawable/button_style"
+			android:textSize="15sp"
+			android:textColor="#ffffff"
+			android:id="@+id/btSign" />
+		<Button
+			android:text="提交"
+			android:layout_width = "wrap_content"
+			android:layout_height = "40dp"
+			android:layout_marginLeft ="15dp"
+			android:background = "@drawable/button_style2"
+			android:layout_weight="0.5"
+			android:textSize="15sp"
+			android:textColor="#ffffff"
+			android:id="@+id/btSub" />
+	</LinearLayout>
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

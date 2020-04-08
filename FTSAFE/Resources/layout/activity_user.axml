@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+		   android:layout_marginLeft="30dp"
+		   android:layout_marginRight="30dp"
+           android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+			    android:layout_marginTop = "15dp"
+			    android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <TextView
+					android:id="@+id/txt_userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="张三"
+				    android:paddingTop = "15dp"
+                    android:textSize="15sp" />
+				<TextView
+					android:id="@+id/txt_userPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="17603902692"
+				    android:paddingTop = "15dp"
+                    android:textSize="15sp" />
+				<Button 
+					android:id="@+id/but_check"
+				    android:layout_width="60dp"
+                    android:layout_height="30dp"
+					android:text = "已审核"
+				    android:background = "#007ACC"
+					android:textColor = "#FFFFFF"
+					android:textSize="15sp" 
+				    android:layout_marginTop = "15dp">
+				</Button>
+            </LinearLayout>
+            <View
+				android:layout_width="match_parent"
+				android:layout_height="2dp"
+				android:layout_marginTop = "8dp"
+				android:id="@+id/viewPage"
+				android:background="#efefef">
+			</View>
+			<LinearLayout
+                android:id="@+id/layoutSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <TextView
+					android:id="@+id/txt_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="     我的信息"
+				    android:clickable="true"
+				    android:paddingTop = "15dp"
+				   android:paddingBottom="10dp"
+				    android:drawableLeft = "@drawable/userinfo"
+                    android:textSize="15sp" />
+            </LinearLayout>
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="2dp"
+				android:layout_marginTop = "8dp"
+				android:id="@+id/viewPage"
+				android:background="#efefef">
+			</View>
+            <LinearLayout
+                android:id="@+id/layoutSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <TextView
+					android:id="@+id/txt_passModify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="     修改密码"
+				    android:paddingTop = "15dp"
+				    android:paddingBottom="10dp"
+				    android:drawableLeft = "@drawable/modifyPass"
+				    android:clickable="true"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <View
+				android:layout_width="match_parent"
+				android:layout_height="2dp"
+				android:layout_marginTop = "8dp"
+				android:id="@+id/viewPage"
+				android:background="#efefef">
+			</View>
+		   <LinearLayout
+                android:id="@+id/layoutSurvey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="     版本更新"
+				    android:paddingTop = "15dp"
+					android:layout_weight ="1"
+				    android:clickable="true"
+                    android:textSize="15sp" 
+				    android:drawableLeft = "@drawable/versionnn"
+			      android:id="@+id/txt_version"/>
+			 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.0.0.0"
+				    android:paddingLeft="15dp"
+				    android:paddingTop = "15dp"
+					android:layout_weight ="1"
+					android:gravity ="right"
+					android:layout_marginRight="15dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

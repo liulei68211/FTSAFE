@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+			app:titleTextAppearance = "@style/Toolbar.TitleText"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+	<ScrollView 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop = "65dp"
+		android:id="@+id/containView">
+		<RelativeLayout   
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/relativeView">
+			<LinearLayout 
+				android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:background ="@drawable/viewBorder"
+				android:layout_marginLeft = "15dp"
+				android:layout_marginRight = "15dp"
+				android:orientation ="vertical"
+			    android:id="@+id/headView">
+				<GridLayout 
+					android:id="@+id/GridLayout1"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:columnCount="2"
+					android:rowCount="4">
+					<ImageButton
+						android:layout_gravity="fill"
+						android:layout_rowSpan="2"
+						android:layout_marginLeft = "10dp"
+						android:layout_marginBottom ="10dp"
+						android:background ="@drawable/mineImg"
+						android:layout_marginTop="10dp" />
+					<TextView
+						android:layout_columnSpan="1"
+						android:layout_gravity="fill"
+						android:text="王小涛"
+						android:textColor="#000"
+						android:layout_marginTop ="15dp"
+						android:layout_marginLeft = "15dp"
+						android:textSize="17sp" 
+					android:id="@+id/loginName"/>
+					<TextView
+						android:layout_columnSpan="1"
+						android:layout_gravity="fill"
+						android:ems="8"
+						android:layout_marginTop="5dp"
+						android:text="17603902692"
+						android:textColor="#000"
+						android:layout_marginLeft = "15dp"
+						android:textSize="15sp" 
+					android:id="@+id/loginMobile"/>
+   				</GridLayout>
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:background ="@drawable/viewlayout"
+					android:id="@+id/minView">
+					<TextView 
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingLeft ="15dp"
+						android:layout_marginTop="15dp"
+						android:textColor = "#000000"
+						android:textSize ="16dp"
+						android:text ="我的信息"/>
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="2dp"
+						android:layout_marginTop = "10dp"
+						android:layout_marginBottom="10dp"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:id="@+id/viewPage"
+						android:background="#efefef">
+					</View>
+					<LinearLayout
+						android:id="@+id/layoutSurvey"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation = "horizontal"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:background ="@drawable/viewlayout">
+						<TextView
+								 android:layout_width="wrap_content"
+								 android:layout_height="wrap_content"
+								 android:text="姓名"
+								 android:layout_weight ="1"
+								 android:textSize="14sp" />
+						<TextView
+								  android:layout_width="wrap_content"
+								  android:layout_height="wrap_content"
+								  android:text="张三"
+								  android:layout_weight ="1"
+								  android:gravity ="right"
+								  android:textSize="14sp" 
+						android:id="@+id/userName"/>
+					</LinearLayout>
+					<LinearLayout
+						android:id="@+id/layoutSurvey"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation = "horizontal"
+						android:layout_marginTop="15dp"
+						android:gravity="center_vertical"
+						android:layout_marginLeft="15dp"
+						android:layout_marginRight="15dp"
+						android:layout_marginBottom ="10dp"
+						android:background ="@drawable/viewlayout">
+						<TextView
+							 android:layout_width="wrap_content"
+							 android:layout_height="wrap_content"
+							 android:text="部门"
+							 android:layout_weight ="1"
+							 android:textSize="14sp" />
+						 <TextView
+							  android:layout_width="wrap_content"
+							  android:layout_height="wrap_content"
+							  android:text="运行科磷酸车间"
+							  android:layout_weight ="1"
+							  android:gravity ="right"
+							  android:textSize="14sp" 
+						android:id="@+id/userDeapart"/>
+						</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop ="10dp"
+				android:layout_below ="@+id/headView"
+				android:background ="@drawable/viewlayout"
+				android:id="@+id/linearView_4">
+				<TextView 
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingLeft ="15dp"
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="10dp"
+					android:textColor = "#000000"
+					android:textSize ="15sp"		
+					android:paddingRight ="15dp"
+					android:drawableRight = "@drawable/rightimg12"
+					android:text ="统计管理"/>
+			</LinearLayout>	
+			<LinearLayout
+				 android:layout_width="match_parent"
+				 android:layout_height="wrap_content"
+				 android:orientation="vertical"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop ="10dp"
+				android:layout_below ="@+id/linearView_4"
+				android:background ="@drawable/viewlayout"
+				android:id="@+id/linearView_5">
+				<TextView 
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingLeft ="15dp"
+					android:layout_marginTop = "10dp"
+					android:textColor = "#000000"
+					android:textSize ="15sp"
+					android:paddingRight ="15dp"
+					android:drawableRight = "@drawable/rightImg12"
+					android:text ="最新消息"/>
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="2dp"
+					android:layout_marginTop = "10dp"
+					android:layout_marginBottom="10dp"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:id="@+id/viewPage"
+					android:background="#efefef">
+				 </View>
+				<TextView 
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingLeft ="15dp"
+					android:textColor = "#000000"
+					android:textSize ="15sp"
+					android:paddingRight ="15dp"
+					android:drawableRight = "@drawable/rightimg12"
+					android:text ="最新制度"/>
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="2dp"
+					android:layout_marginTop = "10dp"
+					android:layout_marginBottom="10dp"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:id="@+id/viewPage"
+					android:background="#efefef">
+				 </View>
+				<TextView 
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingLeft ="15dp"
+					android:textColor = "#000000"
+					android:textSize ="15sp"
+					android:text ="密码修改"
+					android:paddingRight ="15dp"
+					android:drawableRight = "@drawable/rightimg12"
+					android:layout_marginTop ="5dp"
+					android:clickable ="true"
+					android:id="@+id/txt_passModify"/>
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="2dp"
+					android:layout_marginTop = "10dp"
+					android:layout_marginBottom="10dp"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:id="@+id/viewPage"
+					android:background="#efefef">
+				 </View>		
+				<TextView 
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingLeft ="15dp"
+					android:layout_marginTop ="5dp"
+					android:textColor = "#000000"
+					android:textSize ="15sp"
+					android:text ="检测更新"
+					android:clickable ="true"
+					android:layout_marginBottom ="15dp"
+					android:id="@+id/txt_version"/>
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginLeft="30dp"
+				android:layout_marginRight="30dp"
+				android:layout_marginTop ="10dp"
+				android:layout_below = "@+id/linearView_5"
+				android:id="@+id/linearView_6">
+				<Button 
+					android:layout_width="match_parent"
+					android:layout_height="40dp"
+					android:text ="重新登录"
+					android:background ="#37A2E8"
+					android:textColor = "#ffffff"
+				android:id="@+id/btExit"/>
+			</LinearLayout>
+		
+		</RelativeLayout>
+	</ScrollView>		
+</android.support.design.widget.CoordinatorLayout>

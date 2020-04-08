@@ -1,0 +1,869 @@
+<html>
+<head>
+    <title>Cnblogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        #container {
+            height: 300px;
+            min-width: 200px;
+            max-width: 400px;
+        }
+        #container1 {
+            height: 300px;
+            min-width: 200px;
+            max-width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div id="container"></div>
+        </div>
+        <div class="row">
+            <div id="container1"></div>
+        </div>
+    </div>
+  
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="highcharts.js"></script>
+    <script src="highcharts-3d.js"></script>
+    <script src="highcharts-more.js"></script>
+    <script src="data.js"></script>
+    <script src="exporting.js"></script>
+    <script src="export-data.js"></script>
+    <script src="heatmap.js"></script>
+    <script src="variable-pie.js"></script>
+    <script type="text/javascript">
+                //柱状图
+                var chart = Highcharts.chart('container', {
+                    chart: {
+                        type: 'column'
+                    },
+                    title: {
+                        text: '隐患整改统计'
+                    },
+                    subtitle: {
+                        text: '已上报、待整改、待复查隐患数量'
+                    },
+                    legend: {
+                        align: 'right',
+                        verticalAlign: 'middle',
+                        layout: 'vertical'
+                    },
+                    xAxis: {
+                        categories: ['已上报', '待整改', '待复查'],
+                        labels: {
+                            x: -10
+                        }
+                    },
+                    yAxis: {
+                        allowDecimals: false,
+                        title: {
+                            text: '个数'
+                        }
+                    },
+                    series: [{
+                        name: '运行科',
+                        data: [1, 4, 3]
+                    }, {
+                        name: '保障科',
+                        data: [6, 4, 2]
+                    }, {
+                        name: '安全科',
+                        data: [8, 4, 3]
+                    }],
+                    responsive: {
+                        rules: [{
+                            condition: {
+                                maxWidth: 400
+                            },
+                            chartOptions: {
+                                legend: {
+                                    align: 'center',
+                                    verticalAlign: 'bottom',
+                                    layout: 'horizontal'
+                                },
+                                yAxis: {
+                                    labels: {
+                                        align: 'left',
+                                        x: 0,
+                                        y: -5
+                                    },
+                                    title: {
+                                        text: null
+                                    }
+                                },
+                                subtitle: {
+                                    text: null
+                                },
+                                credits: {
+                                    enabled: false
+                                }
+                            }
+                        }]
+                    }
+                });
+                function setSize(width) {
+                    chart.setSize(width, 400);
+                }
+                //折线图
+                var chart = Highcharts.chart('container1', {
+                    chart: {
+                        type: 'spline'
+                    },
+                    title: {
+                        text: '隐患排查统计'
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    xAxis: {
+                        categories: ['一月', '二月', '三月', '四月', '五月', '六月',
+                            '七月', '八月', '九月', '十月', '十一月', '十二月']
+                    },
+                    yAxis: {
+                        title: {
+                            text: '个数'
+                        },
+                        labels: {
+                            formatter: function () {
+                                return this.value ;
+                            }
+                        }
+                    },
+                    tooltip: {
+                        crosshairs: true,
+                        shared: true
+                    },
+                    plotOptions: {
+                        spline: {
+                            marker: {
+                                radius: 4,
+                                lineColor: '#666666',
+                                lineWidth: 1
+                            }
+                        }
+                    },
+                    series: [{
+                        name: '炼铁厂',
+                        marker: {
+                            symbol: 'square'
+                        },
+                        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+                            y: 26.5,
+                            marker: {
+                                symbol: 'url(https://code.highcharts.com.cn/highcharts/graphics/sun.png)'
+                            }
+                        }, 23.3, 18.3, 13.9, 9.6]
+                    }]
+                });
+
+
+                /*
+                 * 
+                 * 
+                   The purpose of this demo is to demonstrate how multiple charts on the same page
+                   can be linked through DOM and Highcharts events and API methods. It takes a
+                   standard Highcharts config with a small variation for each data set, and a
+                   mouse/touch event handler to bind the charts together.
+                   */
+
+
+                /**
+                 * In order to synchronize tooltips and crosshairs, override the
+                 * built-in events with handlers defined on the parent element.
+                 */
+                ['mousemove', 'touchmove', 'touchstart'].forEach(function (eventType) {
+                    document.getElementById('containerC').addEventListener(
+                        eventType,
+                        function (e) {
+                            var chart,
+                                point,
+                                i,
+                                event;
+
+                            for (i = 0; i < Highcharts.charts.length; i = i + 1) {
+                                chart = Highcharts.charts[i];
+                                // Find coordinates within the chart
+                                event = chart.pointer.normalize(e);
+                                // Get the hovered point
+                                point = chart.series[0].searchPoint(event, true);
+
+                                if (point) {
+                                    point.highlight(e);
+                                }
+                            }
+                        }
+                    );
+                });
+
+                /**
+                 * Override the reset function, we don't need to hide the tooltips and
+                 * crosshairs.
+                 */
+                Highcharts.Pointer.prototype.reset = function () {
+                    return undefined;
+                };
+
+                /**
+                 * Highlight a point by showing tooltip, setting hover state and draw crosshair
+                 */
+                Highcharts.Point.prototype.highlight = function (event) {
+                    event = this.series.chart.pointer.normalize(event);
+                    this.onMouseOver(); // Show the hover marker
+                    this.series.chart.tooltip.refresh(this); // Show the tooltip
+                    this.series.chart.xAxis[0].drawCrosshair(event, this); // Show the crosshair
+                };
+
+                /**
+                 * Synchronize zooming through the setExtremes event handler.
+                 */
+                function syncExtremes(e) {
+                    var thisChart = this.chart;
+
+                    if (e.trigger !== 'syncExtremes') { // Prevent feedback loop
+                        Highcharts.each(Highcharts.charts, function (chart) {
+                            if (chart !== thisChart) {
+                                if (chart.xAxis[0].setExtremes) { // It is null while updating
+                                    chart.xAxis[0].setExtremes(
+                                        e.min,
+                                        e.max,
+                                        undefined,
+                                        false,
+                                        { trigger: 'syncExtremes' }
+                                    );
+                                }
+                            }
+                        });
+                    }
+                }
+
+                // Get the data. The contents of the data file can be viewed at
+                Highcharts.ajax({
+                    url: 'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/activity.json',
+                    dataType: 'text',
+                    success: function (activity) {
+
+                        activity = JSON.parse(activity);
+                        activity.datasets.forEach(function (dataset, i) {
+
+                            // Add X values
+                            dataset.data = Highcharts.map(dataset.data, function (val, j) {
+                                return [activity.xData[j], val];
+                            });
+
+                            var chartDiv = document.createElement('div');
+                            chartDiv.className = 'chart';
+                            document.getElementById('containerC').appendChild(chartDiv);
+
+                            Highcharts.chart(chartDiv, {
+                                chart: {
+                                    marginLeft: 40, // Keep all charts left aligned
+                                    spacingTop: 20,
+                                    spacingBottom: 20
+                                },
+                                title: {
+                                    text: dataset.name,
+                                    align: 'left',
+                                    margin: 0,
+                                    x: 30
+                                },
+                                credits: {
+                                    enabled: false
+                                },
+                                legend: {
+                                    enabled: false
+                                },
+                                xAxis: {
+                                    crosshair: true,
+                                    events: {
+                                        setExtremes: syncExtremes
+                                    },
+                                    labels: {
+                                        format: '{value} km'
+                                    }
+                                },
+                                yAxis: {
+                                    title: {
+                                        text: null
+                                    }
+                                },
+                                tooltip: {
+                                    positioner: function () {
+                                        return {
+                                            // right aligned
+                                            x: this.chart.chartWidth - this.label.width,
+                                            y: 10 // align to title
+                                        };
+                                    },
+                                    borderWidth: 0,
+                                    backgroundColor: 'none',
+                                    pointFormat: '{point.y}',
+                                    headerFormat: '',
+                                    shadow: false,
+                                    style: {
+                                        fontSize: '18px'
+                                    },
+                                    valueDecimals: dataset.valueDecimals
+                                },
+                                series: [{
+                                    data: dataset.data,
+                                    name: dataset.name,
+                                    type: dataset.type,
+                                    color: Highcharts.getOptions().colors[i],
+                                    fillOpacity: 0.3,
+                                    tooltip: {
+                                        valueSuffix: ' ' + dataset.unit
+                                    }
+                                }]
+                            });
+                        });
+                    }
+                });
+
+                Highcharts.chart('containerS', {
+
+                    chart: {
+                        type: 'column',
+                        styledMode: true
+                    },
+
+                    title: {
+                        text: 'Styling axes and columns'
+                    },
+
+                    yAxis: [{
+                        className: 'highcharts-color-0',
+                        title: {
+                            text: 'Primary axis'
+                        }
+                    }, {
+                        className: 'highcharts-color-1',
+                        opposite: true,
+                        title: {
+                            text: 'Secondary axis'
+                        }
+                    }],
+
+                    plotOptions: {
+                        column: {
+                            borderRadius: 5
+                        }
+                    },
+
+                    series: [{
+                        data: [1, 3, 2, 4]
+                    }, {
+                        data: [324, 124, 547, 221],
+                        yAxis: 1
+                    }]
+
+                });
+                Highcharts.chart('containerAc', {
+                    chart: {
+                        type: 'spline'
+                    },
+
+                    accessibility: {
+                        description: 'Most commonly used desktop screen readers from January 2009 to July 2015 as reported in the Webaim Survey. JAWS remains the most used screen reader, but is steadily declining. ZoomText and WindowEyes are both displaying large growth from 2014 to 2015.'
+                    },
+
+                    legend: {
+                        symbolWidth: 40
+                    },
+
+                    title: {
+                        text: 'Desktop screen readers from 2009 to 2015'
+                    },
+
+                    subtitle: {
+                        text: 'Click on point to visit official website'
+                    },
+
+                    yAxis: {
+                        title: {
+                            text: 'Percentage usage'
+                        }
+                    },
+
+                    xAxis: {
+                        title: {
+                            text: 'Time'
+                        },
+                        accessibility: {
+                            description: 'Time from January 2009 to July 2015'
+                        },
+                        categories: ['January 2009', 'December 2010', 'May 2012', 'January 2014', 'July 2015']
+                    },
+
+                    tooltip: {
+                        split: true
+                    },
+
+                    plotOptions: {
+                        series: {
+                            point: {
+                                events: {
+                                    click: function () {
+                                        window.location.href = this.series.options.website;
+                                    }
+                                }
+                            },
+                            cursor: 'pointer'
+                        }
+                    },
+
+                    series: [
+                        {
+                            name: 'JAWS',
+                            data: [74, 69.6, 63.7, 63.9, 43.7],
+                            website: 'https://www.freedomscientific.com/Products/Blindness/JAWS'
+                        }, {
+                            name: 'NVDA',
+                            data: [8, 34.8, 43.0, 51.2, 41.4],
+                            website: 'https://www.nvaccess.org',
+                            dashStyle: 'Dot'
+                        }, {
+                            name: 'VoiceOver',
+                            data: [6, 20.2, 30.7, 36.8, 30.9],
+                            website: 'http://www.apple.com/accessibility/osx/voiceover',
+                            dashStyle: 'ShortDot',
+                            color: Highcharts.getOptions().colors[7]
+                        }, {
+                            name: 'Window-Eyes',
+                            data: [23, 19.0, 20.7, 13.9, 29.6],
+                            website: 'http://www.gwmicro.com/window-eyes',
+                            dashStyle: 'Dash',
+                            color: Highcharts.getOptions().colors[0]
+                        }, {
+                            name: 'ZoomText',
+                            data: [0, 6.1, 6.8, 5.3, 27.5],
+                            website: 'http://www.zoomtext.com/products/zoomtext-magnifierreader',
+                            dashStyle: 'ShortDashDot',
+                            color: Highcharts.getOptions().colors[8]
+                        }, {
+                            name: 'System Access To Go',
+                            data: [0, 16.2, 22.1, 26.2, 6.9],
+                            website: 'https://www.satogo.com',
+                            dashStyle: 'ShortDash',
+                            color: Highcharts.getOptions().colors[1]
+                        }, {
+                            name: 'ChromeVox',
+                            data: [0, 0, 2.8, 4.8, 2.8],
+                            website: 'http://www.chromevox.com',
+                            dashStyle: 'DotDash',
+                            color: Highcharts.getOptions().colors[4]
+                        }, {
+                            name: 'Other',
+                            data: [0, 7.4, 5.9, 9.3, 6.5],
+                            website: 'http://www.disabled-world.com/assistivedevices/computer/screen-readers.php',
+                            dashStyle: 'LongDash',
+                            color: Highcharts.getOptions().colors[7]
+                        }
+                    ],
+
+                    responsive: {
+                        rules: [{
+                            condition: {
+                                maxWidth: 500
+                            },
+                            chartOptions: {
+                                legend: {
+                                    itemWidth: 150
+                                }
+                            }
+                        }]
+                    }
+                });
+
+                Highcharts.chart('containerD', {
+                    chart: {
+                        type: 'spline',
+                        animation: Highcharts.svg, // don't animate in old IE
+                        marginRight: 10,
+                        events: {
+                            load: function () {
+
+                                // set up the updating of the chart each second
+                                var series = this.series[0];
+                                setInterval(function () {
+                                    var x = (new Date()).getTime(), // current time
+                                        y = Math.random();
+                                    series.addPoint([x, y], true, true);
+                                }, 1000);
+                            }
+                        }
+                    },
+
+                    time: {
+                        useUTC: false
+                    },
+
+                    title: {
+                        text: 'Live random data'
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        tickPixelInterval: 150
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Value'
+                        },
+                        plotLines: [{
+                            value: 0,
+                            width: 1,
+                            color: '#808080'
+                        }]
+                    },
+                    tooltip: {
+                        headerFormat: '<b>{series.name}</b><br/>',
+                        pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}'
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    series: [{
+                        name: 'Random data',
+                        data: (function () {
+                            // generate an array of random data
+                            var data = [],
+                                time = (new Date()).getTime(),
+                                i;
+
+                            for (i = -19; i <= 0; i += 1) {
+                                data.push({
+                                    x: time + i * 1000,
+                                    y: Math.random()
+                                });
+                            }
+                            return data;
+                        }())
+                    }]
+                });
+                var chart = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'container3D',
+                        type: 'column',
+                        options3d: {
+                            enabled: true,
+                            alpha: 15,
+                            beta: 15,
+                            depth: 50,
+                            viewDistance: 25
+                        }
+                    },
+                    title: {
+                        text: 'Chart rotation demo'
+                    },
+                    subtitle: {
+                        text: 'Test options by dragging the sliders below'
+                    },
+                    plotOptions: {
+                        column: {
+                            depth: 25
+                        }
+                    },
+                    series: [{
+                        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+                    }]
+                });
+
+                function showValues() {
+                    $('#alpha-value').html(chart.options.chart.options3d.alpha);
+                    $('#beta-value').html(chart.options.chart.options3d.beta);
+                    $('#depth-value').html(chart.options.chart.options3d.depth);
+                }
+
+                // Activate the sliders
+                $('#sliders input').on('input change', function () {
+                    chart.options.chart.options3d[this.id] = parseFloat(this.value);
+                    showValues();
+                    chart.redraw(false);
+                });
+
+                showValues();
+
+                Highcharts.chart('containerG', {
+
+                    chart: {
+                        type: 'gauge',
+                        plotBackgroundColor: null,
+                        plotBackgroundImage: null,
+                        plotBorderWidth: 0,
+                        plotShadow: false
+                    },
+
+                    title: {
+                        text: 'Speedometer'
+                    },
+
+                    pane: {
+                        startAngle: -150,
+                        endAngle: 150,
+                        background: [{
+                            backgroundColor: {
+                                linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                                stops: [
+                                    [0, '#FFF'],
+                                    [1, '#333']
+                                ]
+                            },
+                            borderWidth: 0,
+                            outerRadius: '109%'
+                        }, {
+                            backgroundColor: {
+                                linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                                stops: [
+                                    [0, '#333'],
+                                    [1, '#FFF']
+                                ]
+                            },
+                            borderWidth: 1,
+                            outerRadius: '107%'
+                        }, {
+                            // default background
+                        }, {
+                            backgroundColor: '#DDD',
+                            borderWidth: 0,
+                            outerRadius: '105%',
+                            innerRadius: '103%'
+                        }]
+                    },
+
+                    // the value axis
+                    yAxis: {
+                        min: 0,
+                        max: 200,
+
+                        minorTickInterval: 'auto',
+                        minorTickWidth: 1,
+                        minorTickLength: 10,
+                        minorTickPosition: 'inside',
+                        minorTickColor: '#666',
+
+                        tickPixelInterval: 30,
+                        tickWidth: 2,
+                        tickPosition: 'inside',
+                        tickLength: 10,
+                        tickColor: '#666',
+                        labels: {
+                            step: 2,
+                            rotation: 'auto'
+                        },
+                        title: {
+                            text: 'km/h'
+                        },
+                        plotBands: [{
+                            from: 0,
+                            to: 120,
+                            color: '#55BF3B' // green
+                        }, {
+                            from: 120,
+                            to: 160,
+                            color: '#DDDF0D' // yellow
+                        }, {
+                            from: 160,
+                            to: 200,
+                            color: '#DF5353' // red
+                        }]
+                    },
+
+                    series: [{
+                        name: 'Speed',
+                        data: [80],
+                        tooltip: {
+                            valueSuffix: ' km/h'
+                        }
+                    }]
+
+                },
+                    // Add some life
+                    function (chart) {
+                        if (!chart.renderer.forExport) {
+                            setInterval(function () {
+                                var point = chart.series[0].points[0],
+                                    newVal,
+                                    inc = Math.round((Math.random() - 0.5) * 20);
+
+                                newVal = point.y + inc;
+                                if (newVal < 0 || newVal > 200) {
+                                    newVal = point.y - inc;
+                                }
+
+                                point.update(newVal);
+
+                            }, 3000);
+                        }
+                    });
+
+
+                Highcharts.chart('containerH', {
+
+                    chart: {
+                        type: 'heatmap',
+                        marginTop: 40,
+                        marginBottom: 80,
+                        plotBorderWidth: 1
+                    },
+
+
+                    title: {
+                        text: 'Sales per employee per weekday'
+                    },
+
+                    xAxis: {
+                        categories: ['Alexander', 'Marie', 'Maximilian', 'Sophia', 'Lukas', 'Maria', 'Leon', 'Anna', 'Tim', 'Laura']
+                    },
+
+                    yAxis: {
+                        categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                        title: null
+                    },
+
+                    colorAxis: {
+                        min: 0,
+                        minColor: '#FFFFFF',
+                        maxColor: Highcharts.getOptions().colors[0]
+                    },
+
+                    legend: {
+                        align: 'right',
+                        layout: 'vertical',
+                        margin: 0,
+                        verticalAlign: 'top',
+                        y: 25,
+                        symbolHeight: 280
+                    },
+
+                    tooltip: {
+                        formatter: function () {
+                            return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> sold <br><b>' +
+                                this.point.value + '</b> items on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>';
+                        }
+                    },
+
+                    series: [{
+                        name: 'Sales per employee',
+                        borderWidth: 1,
+                        data: [[0, 0, 10], [0, 1, 19], [0, 2, 8], [0, 3, 24], [0, 4, 67], [1, 0, 92], [1, 1, 58], [1, 2, 78], [1, 3, 117], [1, 4, 48], [2, 0, 35], [2, 1, 15], [2, 2, 123], [2, 3, 64], [2, 4, 52], [3, 0, 72], [3, 1, 132], [3, 2, 114], [3, 3, 19], [3, 4, 16], [4, 0, 38], [4, 1, 5], [4, 2, 8], [4, 3, 117], [4, 4, 115], [5, 0, 88], [5, 1, 32], [5, 2, 12], [5, 3, 6], [5, 4, 120], [6, 0, 13], [6, 1, 44], [6, 2, 88], [6, 3, 98], [6, 4, 96], [7, 0, 31], [7, 1, 1], [7, 2, 82], [7, 3, 32], [7, 4, 30], [8, 0, 85], [8, 1, 97], [8, 2, 123], [8, 3, 64], [8, 4, 84], [9, 0, 47], [9, 1, 114], [9, 2, 31], [9, 3, 48], [9, 4, 91]],
+                        dataLabels: {
+                            enabled: true,
+                            color: '#000000'
+                        }
+                    }]
+
+                });
+                Highcharts.chart('containerM', {
+
+                    chart: {
+                        polar: true
+                    },
+
+                    title: {
+                        text: 'Highcharts Polar Chart'
+                    },
+
+                    subtitle: {
+                        text: 'Also known as Radar Chart'
+                    },
+
+                    pane: {
+                        startAngle: 0,
+                        endAngle: 360
+                    },
+
+                    xAxis: {
+                        tickInterval: 45,
+                        min: 0,
+                        max: 360,
+                        labels: {
+                            format: '{value}°'
+                        }
+                    },
+
+                    yAxis: {
+                        min: 0
+                    },
+
+                    plotOptions: {
+                        series: {
+                            pointStart: 0,
+                            pointInterval: 45
+                        },
+                        column: {
+                            pointPadding: 0,
+                            groupPadding: 0
+                        }
+                    },
+
+                    series: [{
+                        type: 'column',
+                        name: 'Column',
+                        data: [8, 7, 6, 5, 4, 3, 2, 1],
+                        pointPlacement: 'between'
+                    }, {
+                        type: 'line',
+                        name: 'Line',
+                        data: [1, 2, 3, 4, 5, 6, 7, 8]
+                    }, {
+                        type: 'area',
+                        name: 'Area',
+                        data: [1, 8, 2, 7, 3, 6, 4, 5]
+                    }]
+                });
+            </script>
+    <style type="text/css">
+                @import 'https://code.highcharts.com/css/highcharts.css';
+
+                #containerS {
+                    height: 400px;
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+
+                /* Link the series colors to axis colors */
+                .highcharts-color-0 {
+                    fill: #7cb5ec;
+                    stroke: #7cb5ec;
+                }
+
+                .highcharts-axis.highcharts-color-0 .highcharts-axis-line {
+                    stroke: #7cb5ec;
+                }
+
+                .highcharts-axis.highcharts-color-0 text {
+                    fill: #7cb5ec;
+                }
+
+                .highcharts-color-1 {
+                    fill: #90ed7d;
+                    stroke: #90ed7d;
+                }
+
+                .highcharts-axis.highcharts-color-1 .highcharts-axis-line {
+                    stroke: #90ed7d;
+                }
+
+                .highcharts-axis.highcharts-color-1 text {
+                    fill: #90ed7d;
+                }
+
+
+                .highcharts-yaxis .highcharts-axis-line {
+                    stroke-width: 2px;
+                }
+            </style>
+</body>
+</html>

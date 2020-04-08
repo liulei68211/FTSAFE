@@ -1,0 +1,2773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="carNumIdentification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="image" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="carNumIdentificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carNumIdentificationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveCarInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gateCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveCarInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="saveCarInfoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lineUpInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doorCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lineUpInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lineUpInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAppUserJM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAppUserJMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAppUserJMResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="facResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="facResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CmeasureInfoJL99">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cmCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CmeasureInfoJL99Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CmeasureInfoJL99Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="exitSure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="measType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="moreCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="flag" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="exitSureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="exitSureResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertOutDoor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="meaType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="moreCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertOutDoorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertOutDoorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectNeiPanInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectNeiPanInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectNeiPanInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="storeLoad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loadFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loadUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loadTime" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="loadId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="storeLoadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeLoadResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="storeQua">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="quaFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="quaUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="quaTime" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="autoId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="storeQuaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeQuaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modifyPass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modifyPassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modifyPassResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="overTimm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="overTimmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="overTimmResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="webTimeMysql">
+        <s:complexType />
+      </s:element>
+      <s:element name="webTimeMysqlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webTimeMysqlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectDepartID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deptID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parengIDStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectDepartIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectDepartIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectaritDepartData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectaritDepartDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectaritDepartDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateAuitInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="autoID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="auitName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateAuitInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateAuitInfoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateAuitInfoNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="memos" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="autoID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="auitName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateAuitInfoNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateAuitInfoNOResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modifyPassMySQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="passNew" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passOld" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modifyPassMySQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modifyPassMySQLResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pathandname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAllDepart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAllDepartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAllDepartResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateHidenUpDept">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hidenID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="deptID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateHidenUpDeptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateHidenUpDeptResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateHidenChangeDept">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="autoID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="revXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateHidenChangeDeptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateHidenChangeDeptResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenAuitDataList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenAuitDataListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectHidenAuitDataListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenAuitData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="autoID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenAuitDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectHidenAuitDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchMessagePartol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchMessagePartolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="searchMessagePartolResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchMessageHiden">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchMessageHidenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchMessageHidenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchPartolStand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchPartolStandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchPartolStandResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_hidenListInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="deptID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_hidenListInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="select_hidenListInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_dangerControlInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="deptID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_dangerControlInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="select_dangerControlInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_dangerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="deptID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_dangerInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="select_dangerInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginSafe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginSafeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginSafeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="partolStation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="partolStationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partolStationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_hidenStatis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_hidenStatisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="select_hidenStatisResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_unCheckHiden">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="select_unCheckHidenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="select_unCheckHidenResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPartolInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="revXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPartolInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertPartolInfoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPartolInfoDay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="revXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPartolInfoDayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertPartolInfoDayResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectChileDepartInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectChileDepartInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectChileDepartInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAbarDepartID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="departName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAbarDepartIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectAbarDepartIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAuitDepartID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="departName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectAuitDepartIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="selectAuitDepartIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deptSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="role" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deptSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptSearchResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="roleSafe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="roleSafeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roleSafeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenPartolType">
+        <s:complexType />
+      </s:element>
+      <s:element name="selectHidenPartolTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectHidenPartolTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenPartolTypeID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partolStyleName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenPartolTypeIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="selectHidenPartolTypeIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenType">
+        <s:complexType />
+      </s:element>
+      <s:element name="selectHidenTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectHidenTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenTypeID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hidenType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectHidenTypeIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="selectHidenTypeIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertHidenInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="revXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertHidenInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertHidenInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateReformInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="autoID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="revXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateReformInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateReformInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateReformSureInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="autoID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="revXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateReformSureInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateReformSureInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateReformSureInfoNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="autoID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="revXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateReformSureInfoNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateReformSureInfoNewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateReformCheckInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="autoID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="revXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateReformCheckInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateReformCheckInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hidenInfoList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deptID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hidenFlag" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hidenInfoListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hidenInfoListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selecthidenInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="autoID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hidenFlag" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="accID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selecthidenInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selecthidenInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchSafeSureInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchSafeSureInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchSafeSureInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subSafeRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="revXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="subSafeRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="subSafeRecordResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchDangerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchDangerInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchDangerInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchPartolData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchPartolDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchPartolDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchEquipmentData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchEquipmentDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchEquipmentDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchEquipmentControlData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="equipmentName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchEquipmentControlDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchEquipmentControlDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertEquipmentPartolData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arr" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertEquipmentPartolDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertEquipmentPartolDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchStationData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="departID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchStationDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchStationDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="carNumIdentificationSoapIn">
+    <wsdl:part name="parameters" element="tns:carNumIdentification" />
+  </wsdl:message>
+  <wsdl:message name="carNumIdentificationSoapOut">
+    <wsdl:part name="parameters" element="tns:carNumIdentificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveCarInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:saveCarInfo" />
+  </wsdl:message>
+  <wsdl:message name="saveCarInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:saveCarInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="lineUpInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:lineUpInfo" />
+  </wsdl:message>
+  <wsdl:message name="lineUpInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:lineUpInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAppUserJMSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAppUserJM" />
+  </wsdl:message>
+  <wsdl:message name="selectAppUserJMSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAppUserJMResponse" />
+  </wsdl:message>
+  <wsdl:message name="facSoapIn">
+    <wsdl:part name="parameters" element="tns:fac" />
+  </wsdl:message>
+  <wsdl:message name="facSoapOut">
+    <wsdl:part name="parameters" element="tns:facResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectUserSoapIn">
+    <wsdl:part name="parameters" element="tns:selectUser" />
+  </wsdl:message>
+  <wsdl:message name="selectUserSoapOut">
+    <wsdl:part name="parameters" element="tns:selectUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CmeasureInfoJL99SoapIn">
+    <wsdl:part name="parameters" element="tns:CmeasureInfoJL99" />
+  </wsdl:message>
+  <wsdl:message name="CmeasureInfoJL99SoapOut">
+    <wsdl:part name="parameters" element="tns:CmeasureInfoJL99Response" />
+  </wsdl:message>
+  <wsdl:message name="exitSureSoapIn">
+    <wsdl:part name="parameters" element="tns:exitSure" />
+  </wsdl:message>
+  <wsdl:message name="exitSureSoapOut">
+    <wsdl:part name="parameters" element="tns:exitSureResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertOutDoorSoapIn">
+    <wsdl:part name="parameters" element="tns:insertOutDoor" />
+  </wsdl:message>
+  <wsdl:message name="insertOutDoorSoapOut">
+    <wsdl:part name="parameters" element="tns:insertOutDoorResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectNeiPanInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:selectNeiPanInfo" />
+  </wsdl:message>
+  <wsdl:message name="selectNeiPanInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:selectNeiPanInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="storeLoadSoapIn">
+    <wsdl:part name="parameters" element="tns:storeLoad" />
+  </wsdl:message>
+  <wsdl:message name="storeLoadSoapOut">
+    <wsdl:part name="parameters" element="tns:storeLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="storeQuaSoapIn">
+    <wsdl:part name="parameters" element="tns:storeQua" />
+  </wsdl:message>
+  <wsdl:message name="storeQuaSoapOut">
+    <wsdl:part name="parameters" element="tns:storeQuaResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyPassSoapIn">
+    <wsdl:part name="parameters" element="tns:modifyPass" />
+  </wsdl:message>
+  <wsdl:message name="modifyPassSoapOut">
+    <wsdl:part name="parameters" element="tns:modifyPassResponse" />
+  </wsdl:message>
+  <wsdl:message name="overTimmSoapIn">
+    <wsdl:part name="parameters" element="tns:overTimm" />
+  </wsdl:message>
+  <wsdl:message name="overTimmSoapOut">
+    <wsdl:part name="parameters" element="tns:overTimmResponse" />
+  </wsdl:message>
+  <wsdl:message name="webTimeMysqlSoapIn">
+    <wsdl:part name="parameters" element="tns:webTimeMysql" />
+  </wsdl:message>
+  <wsdl:message name="webTimeMysqlSoapOut">
+    <wsdl:part name="parameters" element="tns:webTimeMysqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectDepartIDSoapIn">
+    <wsdl:part name="parameters" element="tns:selectDepartID" />
+  </wsdl:message>
+  <wsdl:message name="selectDepartIDSoapOut">
+    <wsdl:part name="parameters" element="tns:selectDepartIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectaritDepartDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectaritDepartData" />
+  </wsdl:message>
+  <wsdl:message name="SelectaritDepartDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectaritDepartDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateAuitInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:updateAuitInfo" />
+  </wsdl:message>
+  <wsdl:message name="updateAuitInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:updateAuitInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateAuitInfoNOSoapIn">
+    <wsdl:part name="parameters" element="tns:updateAuitInfoNO" />
+  </wsdl:message>
+  <wsdl:message name="updateAuitInfoNOSoapOut">
+    <wsdl:part name="parameters" element="tns:updateAuitInfoNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyPassMySQLSoapIn">
+    <wsdl:part name="parameters" element="tns:modifyPassMySQL" />
+  </wsdl:message>
+  <wsdl:message name="modifyPassMySQLSoapOut">
+    <wsdl:part name="parameters" element="tns:modifyPassMySQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFile" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAllDepartSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAllDepart" />
+  </wsdl:message>
+  <wsdl:message name="selectAllDepartSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAllDepartResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateHidenUpDeptSoapIn">
+    <wsdl:part name="parameters" element="tns:updateHidenUpDept" />
+  </wsdl:message>
+  <wsdl:message name="updateHidenUpDeptSoapOut">
+    <wsdl:part name="parameters" element="tns:updateHidenUpDeptResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateHidenChangeDeptSoapIn">
+    <wsdl:part name="parameters" element="tns:updateHidenChangeDept" />
+  </wsdl:message>
+  <wsdl:message name="updateHidenChangeDeptSoapOut">
+    <wsdl:part name="parameters" element="tns:updateHidenChangeDeptResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenAuitDataListSoapIn">
+    <wsdl:part name="parameters" element="tns:selectHidenAuitDataList" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenAuitDataListSoapOut">
+    <wsdl:part name="parameters" element="tns:selectHidenAuitDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenAuitDataSoapIn">
+    <wsdl:part name="parameters" element="tns:selectHidenAuitData" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenAuitDataSoapOut">
+    <wsdl:part name="parameters" element="tns:selectHidenAuitDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:searchVersion" />
+  </wsdl:message>
+  <wsdl:message name="searchVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:searchVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchMessagePartolSoapIn">
+    <wsdl:part name="parameters" element="tns:searchMessagePartol" />
+  </wsdl:message>
+  <wsdl:message name="searchMessagePartolSoapOut">
+    <wsdl:part name="parameters" element="tns:searchMessagePartolResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchMessageHidenSoapIn">
+    <wsdl:part name="parameters" element="tns:searchMessageHiden" />
+  </wsdl:message>
+  <wsdl:message name="searchMessageHidenSoapOut">
+    <wsdl:part name="parameters" element="tns:searchMessageHidenResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchPartolStandSoapIn">
+    <wsdl:part name="parameters" element="tns:searchPartolStand" />
+  </wsdl:message>
+  <wsdl:message name="searchPartolStandSoapOut">
+    <wsdl:part name="parameters" element="tns:searchPartolStandResponse" />
+  </wsdl:message>
+  <wsdl:message name="select_hidenListInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:select_hidenListInfo" />
+  </wsdl:message>
+  <wsdl:message name="select_hidenListInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:select_hidenListInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="select_dangerControlInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:select_dangerControlInfo" />
+  </wsdl:message>
+  <wsdl:message name="select_dangerControlInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:select_dangerControlInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="select_dangerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:select_dangerInfo" />
+  </wsdl:message>
+  <wsdl:message name="select_dangerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:select_dangerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginSafeSoapIn">
+    <wsdl:part name="parameters" element="tns:loginSafe" />
+  </wsdl:message>
+  <wsdl:message name="loginSafeSoapOut">
+    <wsdl:part name="parameters" element="tns:loginSafeResponse" />
+  </wsdl:message>
+  <wsdl:message name="partolStationSoapIn">
+    <wsdl:part name="parameters" element="tns:partolStation" />
+  </wsdl:message>
+  <wsdl:message name="partolStationSoapOut">
+    <wsdl:part name="parameters" element="tns:partolStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="select_hidenStatisSoapIn">
+    <wsdl:part name="parameters" element="tns:select_hidenStatis" />
+  </wsdl:message>
+  <wsdl:message name="select_hidenStatisSoapOut">
+    <wsdl:part name="parameters" element="tns:select_hidenStatisResponse" />
+  </wsdl:message>
+  <wsdl:message name="select_unCheckHidenSoapIn">
+    <wsdl:part name="parameters" element="tns:select_unCheckHiden" />
+  </wsdl:message>
+  <wsdl:message name="select_unCheckHidenSoapOut">
+    <wsdl:part name="parameters" element="tns:select_unCheckHidenResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertPartolInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertPartolInfo" />
+  </wsdl:message>
+  <wsdl:message name="insertPartolInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertPartolInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertPartolInfoDaySoapIn">
+    <wsdl:part name="parameters" element="tns:insertPartolInfoDay" />
+  </wsdl:message>
+  <wsdl:message name="insertPartolInfoDaySoapOut">
+    <wsdl:part name="parameters" element="tns:insertPartolInfoDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectChileDepartInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:selectChileDepartInfo" />
+  </wsdl:message>
+  <wsdl:message name="selectChileDepartInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:selectChileDepartInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAbarDepartIDSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAbarDepartID" />
+  </wsdl:message>
+  <wsdl:message name="selectAbarDepartIDSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAbarDepartIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectAuitDepartIDSoapIn">
+    <wsdl:part name="parameters" element="tns:selectAuitDepartID" />
+  </wsdl:message>
+  <wsdl:message name="selectAuitDepartIDSoapOut">
+    <wsdl:part name="parameters" element="tns:selectAuitDepartIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="deptSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:deptSearch" />
+  </wsdl:message>
+  <wsdl:message name="deptSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:deptSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="roleSafeSoapIn">
+    <wsdl:part name="parameters" element="tns:roleSafe" />
+  </wsdl:message>
+  <wsdl:message name="roleSafeSoapOut">
+    <wsdl:part name="parameters" element="tns:roleSafeResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenPartolTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:selectHidenPartolType" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenPartolTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:selectHidenPartolTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenPartolTypeIDSoapIn">
+    <wsdl:part name="parameters" element="tns:selectHidenPartolTypeID" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenPartolTypeIDSoapOut">
+    <wsdl:part name="parameters" element="tns:selectHidenPartolTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:selectHidenType" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:selectHidenTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenTypeIDSoapIn">
+    <wsdl:part name="parameters" element="tns:selectHidenTypeID" />
+  </wsdl:message>
+  <wsdl:message name="selectHidenTypeIDSoapOut">
+    <wsdl:part name="parameters" element="tns:selectHidenTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertHidenInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertHidenInfo" />
+  </wsdl:message>
+  <wsdl:message name="insertHidenInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertHidenInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateReformInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:updateReformInfo" />
+  </wsdl:message>
+  <wsdl:message name="updateReformInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:updateReformInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateReformSureInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:updateReformSureInfo" />
+  </wsdl:message>
+  <wsdl:message name="updateReformSureInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:updateReformSureInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateReformSureInfoNewSoapIn">
+    <wsdl:part name="parameters" element="tns:updateReformSureInfoNew" />
+  </wsdl:message>
+  <wsdl:message name="updateReformSureInfoNewSoapOut">
+    <wsdl:part name="parameters" element="tns:updateReformSureInfoNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateReformCheckInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:updateReformCheckInfo" />
+  </wsdl:message>
+  <wsdl:message name="updateReformCheckInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:updateReformCheckInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="hidenInfoListSoapIn">
+    <wsdl:part name="parameters" element="tns:hidenInfoList" />
+  </wsdl:message>
+  <wsdl:message name="hidenInfoListSoapOut">
+    <wsdl:part name="parameters" element="tns:hidenInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="selecthidenInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:selecthidenInfo" />
+  </wsdl:message>
+  <wsdl:message name="selecthidenInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:selecthidenInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchSafeSureInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:searchSafeSureInfo" />
+  </wsdl:message>
+  <wsdl:message name="searchSafeSureInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:searchSafeSureInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="subSafeRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:subSafeRecord" />
+  </wsdl:message>
+  <wsdl:message name="subSafeRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:subSafeRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchDangerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:searchDangerInfo" />
+  </wsdl:message>
+  <wsdl:message name="searchDangerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:searchDangerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchPartolDataSoapIn">
+    <wsdl:part name="parameters" element="tns:searchPartolData" />
+  </wsdl:message>
+  <wsdl:message name="searchPartolDataSoapOut">
+    <wsdl:part name="parameters" element="tns:searchPartolDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchEquipmentDataSoapIn">
+    <wsdl:part name="parameters" element="tns:searchEquipmentData" />
+  </wsdl:message>
+  <wsdl:message name="searchEquipmentDataSoapOut">
+    <wsdl:part name="parameters" element="tns:searchEquipmentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchEquipmentControlDataSoapIn">
+    <wsdl:part name="parameters" element="tns:searchEquipmentControlData" />
+  </wsdl:message>
+  <wsdl:message name="searchEquipmentControlDataSoapOut">
+    <wsdl:part name="parameters" element="tns:searchEquipmentControlDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertEquipmentPartolDataSoapIn">
+    <wsdl:part name="parameters" element="tns:insertEquipmentPartolData" />
+  </wsdl:message>
+  <wsdl:message name="insertEquipmentPartolDataSoapOut">
+    <wsdl:part name="parameters" element="tns:insertEquipmentPartolDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchStationDataSoapIn">
+    <wsdl:part name="parameters" element="tns:searchStationData" />
+  </wsdl:message>
+  <wsdl:message name="searchStationDataSoapOut">
+    <wsdl:part name="parameters" element="tns:searchStationDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="JGNPSoap">
+    <wsdl:operation name="carNumIdentification">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">百度云车号识别</wsdl:documentation>
+      <wsdl:input message="tns:carNumIdentificationSoapIn" />
+      <wsdl:output message="tns:carNumIdentificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="saveCarInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">保存派车单信息到排队数据表</wsdl:documentation>
+      <wsdl:input message="tns:saveCarInfoSoapIn" />
+      <wsdl:output message="tns:saveCarInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="lineUpInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询排队信息</wsdl:documentation>
+      <wsdl:input message="tns:lineUpInfoSoapIn" />
+      <wsdl:output message="tns:lineUpInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAppUserJM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询用户信息手持</wsdl:documentation>
+      <wsdl:input message="tns:selectAppUserJMSoapIn" />
+      <wsdl:output message="tns:selectAppUserJMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fac">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">递归函数测试</wsdl:documentation>
+      <wsdl:input message="tns:facSoapIn" />
+      <wsdl:output message="tns:facSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询济钢app用户</wsdl:documentation>
+      <wsdl:input message="tns:selectUserSoapIn" />
+      <wsdl:output message="tns:selectUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CmeasureInfoJL99">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询济钢计量信息</wsdl:documentation>
+      <wsdl:input message="tns:CmeasureInfoJL99SoapIn" />
+      <wsdl:output message="tns:CmeasureInfoJL99SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="exitSure">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">车辆出厂确认</wsdl:documentation>
+      <wsdl:input message="tns:exitSureSoapIn" />
+      <wsdl:output message="tns:exitSureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertOutDoor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">向大屏中间表中插入数据</wsdl:documentation>
+      <wsdl:input message="tns:insertOutDoorSoapIn" />
+      <wsdl:output message="tns:insertOutDoorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectNeiPanInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询济钢内盘车辆路线信息</wsdl:documentation>
+      <wsdl:input message="tns:selectNeiPanInfoSoapIn" />
+      <wsdl:output message="tns:selectNeiPanInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="storeLoad">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">装/卸货确认</wsdl:documentation>
+      <wsdl:input message="tns:storeLoadSoapIn" />
+      <wsdl:output message="tns:storeLoadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="storeQua">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取样确认</wsdl:documentation>
+      <wsdl:input message="tns:storeQuaSoapIn" />
+      <wsdl:output message="tns:storeQuaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyPass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改密码</wsdl:documentation>
+      <wsdl:input message="tns:modifyPassSoapIn" />
+      <wsdl:output message="tns:modifyPassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="overTimm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">超时判断</wsdl:documentation>
+      <wsdl:input message="tns:overTimmSoapIn" />
+      <wsdl:output message="tns:overTimmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="webTimeMysql">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询服务器时间</wsdl:documentation>
+      <wsdl:input message="tns:webTimeMysqlSoapIn" />
+      <wsdl:output message="tns:webTimeMysqlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectDepartID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">递归方法查询登录用户id的上级部门id   ------- 上级部门</wsdl:documentation>
+      <wsdl:input message="tns:selectDepartIDSoapIn" />
+      <wsdl:output message="tns:selectDepartIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectaritDepartData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询审核部门信息</wsdl:documentation>
+      <wsdl:input message="tns:SelectaritDepartDataSoapIn" />
+      <wsdl:output message="tns:SelectaritDepartDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAuitInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患审核提交</wsdl:documentation>
+      <wsdl:input message="tns:updateAuitInfoSoapIn" />
+      <wsdl:output message="tns:updateAuitInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAuitInfoNO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患弃审提交</wsdl:documentation>
+      <wsdl:input message="tns:updateAuitInfoNOSoapIn" />
+      <wsdl:output message="tns:updateAuitInfoNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyPassMySQL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">密码修改</wsdl:documentation>
+      <wsdl:input message="tns:modifyPassMySQLSoapIn" />
+      <wsdl:output message="tns:modifyPassMySQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">保存上班的隐患图片</wsdl:documentation>
+      <wsdl:input message="tns:UpdateFileSoapIn" />
+      <wsdl:output message="tns:UpdateFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAllDepart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询所有的部门</wsdl:documentation>
+      <wsdl:input message="tns:selectAllDepartSoapIn" />
+      <wsdl:output message="tns:selectAllDepartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateHidenUpDept">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患转上一级</wsdl:documentation>
+      <wsdl:input message="tns:updateHidenUpDeptSoapIn" />
+      <wsdl:output message="tns:updateHidenUpDeptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateHidenChangeDept">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患跨部门下发整改通知单</wsdl:documentation>
+      <wsdl:input message="tns:updateHidenChangeDeptSoapIn" />
+      <wsdl:output message="tns:updateHidenChangeDeptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenAuitDataList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患审核列表信息查询</wsdl:documentation>
+      <wsdl:input message="tns:selectHidenAuitDataListSoapIn" />
+      <wsdl:output message="tns:selectHidenAuitDataListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenAuitData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患审核信息查询</wsdl:documentation>
+      <wsdl:input message="tns:selectHidenAuitDataSoapIn" />
+      <wsdl:output message="tns:selectHidenAuitDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">版本号 查询</wsdl:documentation>
+      <wsdl:input message="tns:searchVersionSoapIn" />
+      <wsdl:output message="tns:searchVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchMessagePartol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">未巡查查询</wsdl:documentation>
+      <wsdl:input message="tns:searchMessagePartolSoapIn" />
+      <wsdl:output message="tns:searchMessagePartolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchMessageHiden">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">未整改、未复查隐患查询</wsdl:documentation>
+      <wsdl:input message="tns:searchMessageHidenSoapIn" />
+      <wsdl:output message="tns:searchMessageHidenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchPartolStand">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询岗位风险巡查周期</wsdl:documentation>
+      <wsdl:input message="tns:searchPartolStandSoapIn" />
+      <wsdl:output message="tns:searchPartolStandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="select_hidenListInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">岗位隐患排查清单查询</wsdl:documentation>
+      <wsdl:input message="tns:select_hidenListInfoSoapIn" />
+      <wsdl:output message="tns:select_hidenListInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="select_dangerControlInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">岗位应急处置卡查询</wsdl:documentation>
+      <wsdl:input message="tns:select_dangerControlInfoSoapIn" />
+      <wsdl:output message="tns:select_dangerControlInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="select_dangerInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">岗位风险告知卡查询</wsdl:documentation>
+      <wsdl:input message="tns:select_dangerInfoSoapIn" />
+      <wsdl:output message="tns:select_dangerInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="loginSafe">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户登录</wsdl:documentation>
+      <wsdl:input message="tns:loginSafeSoapIn" />
+      <wsdl:output message="tns:loginSafeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="partolStation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">判断是否巡查</wsdl:documentation>
+      <wsdl:input message="tns:partolStationSoapIn" />
+      <wsdl:output message="tns:partolStationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="select_hidenStatis">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患统计</wsdl:documentation>
+      <wsdl:input message="tns:select_hidenStatisSoapIn" />
+      <wsdl:output message="tns:select_hidenStatisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="select_unCheckHiden">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">待审核隐患个数查询</wsdl:documentation>
+      <wsdl:input message="tns:select_unCheckHidenSoapIn" />
+      <wsdl:output message="tns:select_unCheckHidenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPartolInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">保存巡查信息</wsdl:documentation>
+      <wsdl:input message="tns:insertPartolInfoSoapIn" />
+      <wsdl:output message="tns:insertPartolInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPartolInfoDay">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">保存巡查信息(不判断当天是否巡查)</wsdl:documentation>
+      <wsdl:input message="tns:insertPartolInfoDaySoapIn" />
+      <wsdl:output message="tns:insertPartolInfoDaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectChileDepartInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询当前用户部门对应的下级部门</wsdl:documentation>
+      <wsdl:input message="tns:selectChileDepartInfoSoapIn" />
+      <wsdl:output message="tns:selectChileDepartInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAbarDepartID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询整改单位ID、整改人</wsdl:documentation>
+      <wsdl:input message="tns:selectAbarDepartIDSoapIn" />
+      <wsdl:output message="tns:selectAbarDepartIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAuitDepartID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询审核单位ID</wsdl:documentation>
+      <wsdl:input message="tns:selectAuitDepartIDSoapIn" />
+      <wsdl:output message="tns:selectAuitDepartIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deptSearch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询分厂 车间 岗位</wsdl:documentation>
+      <wsdl:input message="tns:deptSearchSoapIn" />
+      <wsdl:output message="tns:deptSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="roleSafe">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询用户角色</wsdl:documentation>
+      <wsdl:input message="tns:roleSafeSoapIn" />
+      <wsdl:output message="tns:roleSafeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenPartolType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询隐患排查方式</wsdl:documentation>
+      <wsdl:input message="tns:selectHidenPartolTypeSoapIn" />
+      <wsdl:output message="tns:selectHidenPartolTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenPartolTypeID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询隐患排查方式ID</wsdl:documentation>
+      <wsdl:input message="tns:selectHidenPartolTypeIDSoapIn" />
+      <wsdl:output message="tns:selectHidenPartolTypeIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询隐患类别</wsdl:documentation>
+      <wsdl:input message="tns:selectHidenTypeSoapIn" />
+      <wsdl:output message="tns:selectHidenTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenTypeID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询隐患类别ID</wsdl:documentation>
+      <wsdl:input message="tns:selectHidenTypeIDSoapIn" />
+      <wsdl:output message="tns:selectHidenTypeIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertHidenInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患信息录入</wsdl:documentation>
+      <wsdl:input message="tns:insertHidenInfoSoapIn" />
+      <wsdl:output message="tns:insertHidenInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateReformInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下发整改通知单</wsdl:documentation>
+      <wsdl:input message="tns:updateReformInfoSoapIn" />
+      <wsdl:output message="tns:updateReformInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateReformSureInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">整改人信息录入</wsdl:documentation>
+      <wsdl:input message="tns:updateReformSureInfoSoapIn" />
+      <wsdl:output message="tns:updateReformSureInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateReformSureInfoNew">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">整改人信息录入2</wsdl:documentation>
+      <wsdl:input message="tns:updateReformSureInfoNewSoapIn" />
+      <wsdl:output message="tns:updateReformSureInfoNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateReformCheckInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">整改信息复查人录入</wsdl:documentation>
+      <wsdl:input message="tns:updateReformCheckInfoSoapIn" />
+      <wsdl:output message="tns:updateReformCheckInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hidenInfoList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患信息查询</wsdl:documentation>
+      <wsdl:input message="tns:hidenInfoListSoapIn" />
+      <wsdl:output message="tns:hidenInfoListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selecthidenInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">隐患信息指定查询</wsdl:documentation>
+      <wsdl:input message="tns:selecthidenInfoSoapIn" />
+      <wsdl:output message="tns:selecthidenInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchSafeSureInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">安全确认查询</wsdl:documentation>
+      <wsdl:input message="tns:searchSafeSureInfoSoapIn" />
+      <wsdl:output message="tns:searchSafeSureInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="subSafeRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">安全确认提交</wsdl:documentation>
+      <wsdl:input message="tns:subSafeRecordSoapIn" />
+      <wsdl:output message="tns:subSafeRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchDangerInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">岗位风险信息查询</wsdl:documentation>
+      <wsdl:input message="tns:searchDangerInfoSoapIn" />
+      <wsdl:output message="tns:searchDangerInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchPartolData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">风险巡查记录查询</wsdl:documentation>
+      <wsdl:input message="tns:searchPartolDataSoapIn" />
+      <wsdl:output message="tns:searchPartolDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchEquipmentData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">岗位设备信息</wsdl:documentation>
+      <wsdl:input message="tns:searchEquipmentDataSoapIn" />
+      <wsdl:output message="tns:searchEquipmentDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchEquipmentControlData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">岗位设备控制点信息</wsdl:documentation>
+      <wsdl:input message="tns:searchEquipmentControlDataSoapIn" />
+      <wsdl:output message="tns:searchEquipmentControlDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertEquipmentPartolData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">插入设备点巡检记录</wsdl:documentation>
+      <wsdl:input message="tns:insertEquipmentPartolDataSoapIn" />
+      <wsdl:output message="tns:insertEquipmentPartolDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchStationData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">岗位信息查询</wsdl:documentation>
+      <wsdl:input message="tns:searchStationDataSoapIn" />
+      <wsdl:output message="tns:searchStationDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="JGNPSoap" type="tns:JGNPSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="carNumIdentification">
+      <soap:operation soapAction="http://tempuri.org/carNumIdentification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveCarInfo">
+      <soap:operation soapAction="http://tempuri.org/saveCarInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lineUpInfo">
+      <soap:operation soapAction="http://tempuri.org/lineUpInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAppUserJM">
+      <soap:operation soapAction="http://tempuri.org/selectAppUserJM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fac">
+      <soap:operation soapAction="http://tempuri.org/fac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectUser">
+      <soap:operation soapAction="http://tempuri.org/selectUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CmeasureInfoJL99">
+      <soap:operation soapAction="http://tempuri.org/CmeasureInfoJL99" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exitSure">
+      <soap:operation soapAction="http://tempuri.org/exitSure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertOutDoor">
+      <soap:operation soapAction="http://tempuri.org/insertOutDoor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectNeiPanInfo">
+      <soap:operation soapAction="http://tempuri.org/selectNeiPanInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="storeLoad">
+      <soap:operation soapAction="http://tempuri.org/storeLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="storeQua">
+      <soap:operation soapAction="http://tempuri.org/storeQua" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyPass">
+      <soap:operation soapAction="http://tempuri.org/modifyPass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="overTimm">
+      <soap:operation soapAction="http://tempuri.org/overTimm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webTimeMysql">
+      <soap:operation soapAction="http://tempuri.org/webTimeMysql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectDepartID">
+      <soap:operation soapAction="http://tempuri.org/selectDepartID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectaritDepartData">
+      <soap:operation soapAction="http://tempuri.org/SelectaritDepartData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAuitInfo">
+      <soap:operation soapAction="http://tempuri.org/updateAuitInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAuitInfoNO">
+      <soap:operation soapAction="http://tempuri.org/updateAuitInfoNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyPassMySQL">
+      <soap:operation soapAction="http://tempuri.org/modifyPassMySQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFile">
+      <soap:operation soapAction="http://tempuri.org/UpdateFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllDepart">
+      <soap:operation soapAction="http://tempuri.org/selectAllDepart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateHidenUpDept">
+      <soap:operation soapAction="http://tempuri.org/updateHidenUpDept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateHidenChangeDept">
+      <soap:operation soapAction="http://tempuri.org/updateHidenChangeDept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenAuitDataList">
+      <soap:operation soapAction="http://tempuri.org/selectHidenAuitDataList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenAuitData">
+      <soap:operation soapAction="http://tempuri.org/selectHidenAuitData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchVersion">
+      <soap:operation soapAction="http://tempuri.org/searchVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMessagePartol">
+      <soap:operation soapAction="http://tempuri.org/searchMessagePartol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMessageHiden">
+      <soap:operation soapAction="http://tempuri.org/searchMessageHiden" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPartolStand">
+      <soap:operation soapAction="http://tempuri.org/searchPartolStand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_hidenListInfo">
+      <soap:operation soapAction="http://tempuri.org/select_hidenListInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_dangerControlInfo">
+      <soap:operation soapAction="http://tempuri.org/select_dangerControlInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_dangerInfo">
+      <soap:operation soapAction="http://tempuri.org/select_dangerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginSafe">
+      <soap:operation soapAction="http://tempuri.org/loginSafe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="partolStation">
+      <soap:operation soapAction="http://tempuri.org/partolStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_hidenStatis">
+      <soap:operation soapAction="http://tempuri.org/select_hidenStatis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_unCheckHiden">
+      <soap:operation soapAction="http://tempuri.org/select_unCheckHiden" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPartolInfo">
+      <soap:operation soapAction="http://tempuri.org/insertPartolInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPartolInfoDay">
+      <soap:operation soapAction="http://tempuri.org/insertPartolInfoDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectChileDepartInfo">
+      <soap:operation soapAction="http://tempuri.org/selectChileDepartInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAbarDepartID">
+      <soap:operation soapAction="http://tempuri.org/selectAbarDepartID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAuitDepartID">
+      <soap:operation soapAction="http://tempuri.org/selectAuitDepartID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deptSearch">
+      <soap:operation soapAction="http://tempuri.org/deptSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="roleSafe">
+      <soap:operation soapAction="http://tempuri.org/roleSafe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenPartolType">
+      <soap:operation soapAction="http://tempuri.org/selectHidenPartolType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenPartolTypeID">
+      <soap:operation soapAction="http://tempuri.org/selectHidenPartolTypeID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenType">
+      <soap:operation soapAction="http://tempuri.org/selectHidenType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenTypeID">
+      <soap:operation soapAction="http://tempuri.org/selectHidenTypeID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertHidenInfo">
+      <soap:operation soapAction="http://tempuri.org/insertHidenInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReformInfo">
+      <soap:operation soapAction="http://tempuri.org/updateReformInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReformSureInfo">
+      <soap:operation soapAction="http://tempuri.org/updateReformSureInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReformSureInfoNew">
+      <soap:operation soapAction="http://tempuri.org/updateReformSureInfoNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReformCheckInfo">
+      <soap:operation soapAction="http://tempuri.org/updateReformCheckInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hidenInfoList">
+      <soap:operation soapAction="http://tempuri.org/hidenInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selecthidenInfo">
+      <soap:operation soapAction="http://tempuri.org/selecthidenInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSafeSureInfo">
+      <soap:operation soapAction="http://tempuri.org/searchSafeSureInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subSafeRecord">
+      <soap:operation soapAction="http://tempuri.org/subSafeRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchDangerInfo">
+      <soap:operation soapAction="http://tempuri.org/searchDangerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPartolData">
+      <soap:operation soapAction="http://tempuri.org/searchPartolData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchEquipmentData">
+      <soap:operation soapAction="http://tempuri.org/searchEquipmentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchEquipmentControlData">
+      <soap:operation soapAction="http://tempuri.org/searchEquipmentControlData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertEquipmentPartolData">
+      <soap:operation soapAction="http://tempuri.org/insertEquipmentPartolData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchStationData">
+      <soap:operation soapAction="http://tempuri.org/searchStationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="JGNPSoap12" type="tns:JGNPSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="carNumIdentification">
+      <soap12:operation soapAction="http://tempuri.org/carNumIdentification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveCarInfo">
+      <soap12:operation soapAction="http://tempuri.org/saveCarInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lineUpInfo">
+      <soap12:operation soapAction="http://tempuri.org/lineUpInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAppUserJM">
+      <soap12:operation soapAction="http://tempuri.org/selectAppUserJM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fac">
+      <soap12:operation soapAction="http://tempuri.org/fac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectUser">
+      <soap12:operation soapAction="http://tempuri.org/selectUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CmeasureInfoJL99">
+      <soap12:operation soapAction="http://tempuri.org/CmeasureInfoJL99" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exitSure">
+      <soap12:operation soapAction="http://tempuri.org/exitSure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertOutDoor">
+      <soap12:operation soapAction="http://tempuri.org/insertOutDoor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectNeiPanInfo">
+      <soap12:operation soapAction="http://tempuri.org/selectNeiPanInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="storeLoad">
+      <soap12:operation soapAction="http://tempuri.org/storeLoad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="storeQua">
+      <soap12:operation soapAction="http://tempuri.org/storeQua" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyPass">
+      <soap12:operation soapAction="http://tempuri.org/modifyPass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="overTimm">
+      <soap12:operation soapAction="http://tempuri.org/overTimm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webTimeMysql">
+      <soap12:operation soapAction="http://tempuri.org/webTimeMysql" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectDepartID">
+      <soap12:operation soapAction="http://tempuri.org/selectDepartID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectaritDepartData">
+      <soap12:operation soapAction="http://tempuri.org/SelectaritDepartData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAuitInfo">
+      <soap12:operation soapAction="http://tempuri.org/updateAuitInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAuitInfoNO">
+      <soap12:operation soapAction="http://tempuri.org/updateAuitInfoNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyPassMySQL">
+      <soap12:operation soapAction="http://tempuri.org/modifyPassMySQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFile">
+      <soap12:operation soapAction="http://tempuri.org/UpdateFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllDepart">
+      <soap12:operation soapAction="http://tempuri.org/selectAllDepart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateHidenUpDept">
+      <soap12:operation soapAction="http://tempuri.org/updateHidenUpDept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateHidenChangeDept">
+      <soap12:operation soapAction="http://tempuri.org/updateHidenChangeDept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenAuitDataList">
+      <soap12:operation soapAction="http://tempuri.org/selectHidenAuitDataList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenAuitData">
+      <soap12:operation soapAction="http://tempuri.org/selectHidenAuitData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchVersion">
+      <soap12:operation soapAction="http://tempuri.org/searchVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMessagePartol">
+      <soap12:operation soapAction="http://tempuri.org/searchMessagePartol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchMessageHiden">
+      <soap12:operation soapAction="http://tempuri.org/searchMessageHiden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPartolStand">
+      <soap12:operation soapAction="http://tempuri.org/searchPartolStand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_hidenListInfo">
+      <soap12:operation soapAction="http://tempuri.org/select_hidenListInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_dangerControlInfo">
+      <soap12:operation soapAction="http://tempuri.org/select_dangerControlInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_dangerInfo">
+      <soap12:operation soapAction="http://tempuri.org/select_dangerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginSafe">
+      <soap12:operation soapAction="http://tempuri.org/loginSafe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="partolStation">
+      <soap12:operation soapAction="http://tempuri.org/partolStation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_hidenStatis">
+      <soap12:operation soapAction="http://tempuri.org/select_hidenStatis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select_unCheckHiden">
+      <soap12:operation soapAction="http://tempuri.org/select_unCheckHiden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPartolInfo">
+      <soap12:operation soapAction="http://tempuri.org/insertPartolInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPartolInfoDay">
+      <soap12:operation soapAction="http://tempuri.org/insertPartolInfoDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectChileDepartInfo">
+      <soap12:operation soapAction="http://tempuri.org/selectChileDepartInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAbarDepartID">
+      <soap12:operation soapAction="http://tempuri.org/selectAbarDepartID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAuitDepartID">
+      <soap12:operation soapAction="http://tempuri.org/selectAuitDepartID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deptSearch">
+      <soap12:operation soapAction="http://tempuri.org/deptSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="roleSafe">
+      <soap12:operation soapAction="http://tempuri.org/roleSafe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenPartolType">
+      <soap12:operation soapAction="http://tempuri.org/selectHidenPartolType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenPartolTypeID">
+      <soap12:operation soapAction="http://tempuri.org/selectHidenPartolTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenType">
+      <soap12:operation soapAction="http://tempuri.org/selectHidenType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectHidenTypeID">
+      <soap12:operation soapAction="http://tempuri.org/selectHidenTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertHidenInfo">
+      <soap12:operation soapAction="http://tempuri.org/insertHidenInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReformInfo">
+      <soap12:operation soapAction="http://tempuri.org/updateReformInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReformSureInfo">
+      <soap12:operation soapAction="http://tempuri.org/updateReformSureInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReformSureInfoNew">
+      <soap12:operation soapAction="http://tempuri.org/updateReformSureInfoNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReformCheckInfo">
+      <soap12:operation soapAction="http://tempuri.org/updateReformCheckInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hidenInfoList">
+      <soap12:operation soapAction="http://tempuri.org/hidenInfoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selecthidenInfo">
+      <soap12:operation soapAction="http://tempuri.org/selecthidenInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSafeSureInfo">
+      <soap12:operation soapAction="http://tempuri.org/searchSafeSureInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subSafeRecord">
+      <soap12:operation soapAction="http://tempuri.org/subSafeRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchDangerInfo">
+      <soap12:operation soapAction="http://tempuri.org/searchDangerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPartolData">
+      <soap12:operation soapAction="http://tempuri.org/searchPartolData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchEquipmentData">
+      <soap12:operation soapAction="http://tempuri.org/searchEquipmentData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchEquipmentControlData">
+      <soap12:operation soapAction="http://tempuri.org/searchEquipmentControlData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertEquipmentPartolData">
+      <soap12:operation soapAction="http://tempuri.org/insertEquipmentPartolData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchStationData">
+      <soap12:operation soapAction="http://tempuri.org/searchStationData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JGNP">
+    <wsdl:port name="JGNPSoap" binding="tns:JGNPSoap">
+      <soap:address location="http://39.98.233.216:10001/JGNP.asmx" />
+    </wsdl:port>
+    <wsdl:port name="JGNPSoap12" binding="tns:JGNPSoap12">
+      <soap12:address location="http://39.98.233.216:10001/JGNP.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

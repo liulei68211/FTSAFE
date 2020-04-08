@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+			app:titleTextAppearance = "@style/Toolbar.TitleText"
+			app:subtitleTextAppearance = "@style/Toolbar.SubTitleText"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+	<RelativeLayout
+		android:layout_marginTop = "55dp"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<ScrollView 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft = "30dp"
+			android:layout_marginRight = "30dp"
+			android:layout_marginTop = "10dp"
+			android:layout_marginBottom="80dp"
+			android:scrollbars ="vertical"
+			android:fadingEdge ="vertical">
+			<GridLayout 
+				android:id="@+id/gridLayout1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:columnCount ="2"
+				android:focusable ="true"	
+				 android:layout_marginBottom = "150dp"
+				android:focusableInTouchMode="true"
+				android:rowCount = "14">
+				<TextView
+					 android:layout_width="wrap_content"
+					 android:layout_height="45dp"
+					 android:gravity="center_vertical"
+					 android:textSize="15sp"
+					 android:textColor ="#000000"
+					 android:text = "排查人"
+					 android:id="@+id/textView1" />
+				<EditText
+					 android:gravity="left"
+					 android:paddingLeft = "5dp"
+					 android:layout_gravity="fill"
+					 android:inputType="textPersonName"
+					 android:textSize="15sp"
+					 android:textColor ="#818181"
+					 android:enabled ="false"
+					 android:layout_marginLeft = "10dp"
+					 android:id="@+id/hidenPerson" />
+				<TextView
+					 android:layout_width="wrap_content"
+					 android:layout_height="45dp"
+					 android:gravity="center_vertical"
+					 android:textSize="15sp"
+					 android:textColor ="#000000"
+					 android:text = "排查单位"
+					 android:id="@+id/textView41" />
+				<EditText
+					 android:gravity="left"
+					 android:paddingLeft = "5dp"
+					 android:layout_gravity="fill"
+					 android:inputType="textPersonName"
+					 android:textSize="15sp"
+					 android:textColor ="#818181"
+					 android:enabled ="false"
+					 android:layout_marginLeft = "10dp"
+					 android:id="@+id/hidenDepart" />
+				<TextView
+					 android:layout_height="45dp"
+					 android:gravity="center_vertical"
+					 android:textColor ="#000000"
+					 android:textSize="15sp"
+					 android:text ="隐患描述"/>
+				<EditText
+					  android:id="@+id/hidenInfo"
+					  android:gravity="center_vertical"
+					  android:layout_gravity="fill"
+					  android:inputType="textMultiLine"		
+					  android:singleLine="false"
+				      android:enabled ="false"
+					  android:textSize="15sp"
+					  android:textColor ="#818181"
+					  android:layout_marginLeft = "10dp"
+					  android:scrollHorizontally="false"
+					  android:ems = "10"
+					  android:paddingRight="16dp" />
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					android:textSize="15sp"
+					android:textColor ="#000000"
+					android:text="整改单位" />
+				<EditText
+					android:id="@+id/txtCheckFac"
+					android:gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:textSize = "15sp"
+					android:paddingLeft ="5dp"
+					android:layout_gravity="fill"
+					android:textColor ="#818181"
+					android:enabled = "false"
+					android:text =""/>
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					android:textSize="15sp"
+					android:textColor ="#000000"
+					android:text="整改类型" />
+				<EditText
+					android:id="@+id/txtCheckType"
+					android:gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:textSize = "15sp"
+					android:paddingLeft ="5dp"
+					android:layout_gravity="fill"
+					android:textColor ="#818181"
+					android:enabled = "false"
+					android:text =""/>
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					 android:textSize="15sp"
+					 android:textColor ="#000000"
+					android:text="整改期限" />
+				<EditText
+					android:id="@+id/txtTime"
+					android:gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:textSize = "15sp"
+					android:paddingLeft ="5dp"
+					android:layout_gravity="fill"
+					android:textColor ="#818181"
+					android:enabled = "false"
+					android:text =""/>
+				<TextView
+					 android:layout_height="45dp"
+					 android:gravity="center_vertical"
+					 android:textSize="15sp"
+					 android:textColor ="#000000"
+					 android:text ="整改要求"/>
+				<EditText
+					android:id="@+id/txtCheckRequest"
+					android:gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:textSize = "15sp"
+					android:paddingLeft ="5dp"
+					android:paddingRight ="5dp"
+					android:layout_gravity="fill"
+					android:textColor ="#818181"
+					android:ems ="10"
+					android:enabled = "false"
+					android:text =""/>
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					android:textSize="15sp"
+					 android:textColor ="#000000"
+					android:text="整改责任人" />
+				<EditText
+					android:id="@+id/txtCheckPerson"
+					android:gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:textSize = "15sp"
+					android:paddingLeft ="5dp"
+					android:layout_gravity="fill"
+					android:textColor ="#818181"
+					android:enabled = "false"
+					android:text =""/>
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					android:textSize="15sp"
+					 android:textColor ="#000000"
+					android:text="整改人" />
+				<EditText
+					android:id="@+id/txtCheckPerson_2"
+					android:gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:textSize = "15sp"
+					android:paddingLeft ="5dp"
+					android:layout_gravity="fill"
+					android:textColor ="#818181"
+					android:enabled = "false"
+					android:text =""/>
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					 android:textSize="15sp"
+					 android:textColor ="#000000"
+					android:text="整改日期" />
+				<EditText
+					android:id="@+id/txtCheckTime"
+					android:gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:textSize = "15sp"
+					android:paddingLeft ="5dp"
+					android:layout_gravity="fill"
+					android:textColor ="#818181"
+					android:enabled = "false"
+					android:text =""/>	
+			`	<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					 android:textSize="15sp"
+					 android:textColor ="#000000"
+					android:text="整改结果" />
+				<EditText
+					android:id="@+id/editResult"
+					android:gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:textSize = "15sp"
+					android:paddingLeft ="5dp"
+					android:layout_gravity="fill"
+					android:textColor ="#818181"
+					android:enabled = "false"
+					android:text =""/>	
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					 android:textSize="15sp"
+					 android:textColor ="#000000"
+					android:text="复查人" />
+				<EditText
+					  android:id="@+id/editReviewPerson"
+					  android:gravity="center_vertical"
+					  android:layout_gravity="fill"
+					  android:inputType="text"		
+					 android:paddingLeft ="5dp"
+					 android:textColor ="#818181"
+					android:textSize = "15sp"
+					 android:layout_marginLeft="10dp" />	
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					 android:textSize="15sp"
+					 android:textColor ="#000000"
+					android:text="复查结果" />
+				<EditText
+					  android:id="@+id/editReviewResult"
+					  android:gravity="center_vertical"
+					  android:layout_gravity="fill"
+					  android:inputType="textMultiLine"		
+					  android:singleLine="false"
+					  android:paddingLeft ="5dp"
+					  android:textColor ="#818181"
+					  android:textSize = "15sp"		
+				android:ems ="10"
+					  android:layout_marginLeft="10dp"
+					  android:scrollHorizontally="false" />	
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					 android:textSize="15sp"
+					 android:textColor ="#000000"
+					android:text="复查时间" />
+				<Button
+				android:id="@+id/editReviewTime"
+				android:gravity="center_vertical"
+				android:layout_marginLeft="10dp"
+				android:textSize = "15sp"
+			    android:paddingLeft ="5dp"
+				android:text= "2019-12-06"
+				android:layout_gravity="fill"
+				android:background = "#FAFAFA"
+				android:layout_height="45dp"
+				android:stateListAnimator="@null"	
+				android:textColor ="#818181"/>
+				<TextView
+					 android:layout_height="45dp"
+					 android:gravity="center_vertical"
+					  android:textSize="15sp"
+					 android:textColor ="#000000"
+					 android:text ="隐患图片"/>
+				  <ImageView
+						android:layout_height = "150dp"
+				        android:layout_columnSpan ="2"
+						android:scaleType="fitXY"
+					    android:layout_gravity="fill"
+						android:id="@+id/imageHiden" />
+				<TextView
+					 android:layout_height="45dp"
+					 android:gravity="center_vertical"
+					  android:textSize="15sp"
+					 android:textColor ="#000000"
+					 android:text ="整改图片"/>
+				  <ImageView
+						android:layout_height = "150dp"
+				        android:layout_columnSpan ="2"
+						android:scaleType="fitXY"
+					    android:layout_marginBottom = "50dp"
+					    android:layout_gravity="fill"
+						android:id="@+id/imageReform" />
+				
+			</GridLayout>
+	</ScrollView>
+		<LinearLayout
+			android:id="@+id/linearBt"
+			android:layout_width = "match_parent"
+			android:layout_height = "wrap_content"
+			android:layout_marginLeft = "30dp"
+			android:layout_marginRight = "30dp"
+			android:layout_marginBottom = "15dp"
+			android:orientation="horizontal"
+			android:layout_alignParentBottom = "true">
+			<Button
+				android:text="提交"
+				android:layout_marginTop="25dp"
+				android:layout_width = "match_parent"
+				android:layout_height = "40dp"
+				android:background = "@drawable/button_style"
+				android:textSize="15sp"
+				android:textColor="#ffffff"	
+				android:id="@+id/btSub" />
+		</LinearLayout>
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

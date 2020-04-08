@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background ="@drawable/background">
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginTop ="10dp"
+        android:text="登录"
+        android:textSize="16sp"
+		android:textColor ="#ffffff"   
+		android:layout_centerHorizontal="true"
+        android:id="@+id/textView3" />
+	<!--图片-->
+	<ImageView
+		android:layout_width = "match_parent"
+        android:layout_height="120dp"
+		android:layout_marginTop ="50dp"
+		android:layout_below = "@id/textView3"
+		android:src="@drawable/navbar"
+		android:id="@+id/imgView1"/>
+	<GridLayout 
+		android:id="@+id/gridLayout1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/imgView1"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop ="50dp"
+		android:columnCount ="1"
+		android:rowCount = "2">
+		<EditText
+			android:gravity="left|center"
+			android:layout_height ="50dp"
+			android:paddingLeft = "115dp"
+			android:layout_gravity="fill"
+			android:hint="请输入手机号码"
+			android:inputType ="text"
+		    android:textSize="15sp"
+			android:background ="@drawable/up"
+            android:id="@+id/edit_user" />
+		 <EditText
+			android:gravity="left|center"
+			android:paddingLeft = "115dp"
+			android:layout_height ="50dp"
+			android:layout_gravity="fill"
+			android:inputType = "textPassword"
+			android:textSize="15sp"
+			android:hint="请输入密码"
+			android:background ="@drawable/down"
+            android:id="@+id/edit_pass" />
+	</GridLayout>
+	<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+	    android:layout_marginLeft = "30dp"
+		android:layout_marginRight = "30dp"
+	    android:layout_below = "@+id/gridLayout1"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/relayoutView">
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:textSize="14sp"
+			android:textColor ="#ffffff"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/textView3" />
+          <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="注册新用户"
+             android:textSize="14sp"
+			 android:textColor ="#ffffff"
+             android:layout_alignParentRight="true"
+             android:id="@+id/textView4" />
+        </RelativeLayout>
+	<Button
+		android:text=""
+		android:layout_width="225dp"
+        android:layout_height="65dp"
+	    android:layout_marginTop = "15dp"
+	    android:background = "@drawable/login"
+		android:layout_below = "@+id/relayoutView"
+		android:layout_centerHorizontal="true"
+		android:textColor="#60AAE7"
+		android:textSize="15sp"
+		android:id="@+id/bt_login" />
+	<TextView	
+		android:id="@+id/txtOrderLabel"	
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textColor = "#ffffff"
+		android:textSize="13sp"
+		android:layout_below = "@+id/bt_login"
+		android:text ="使用手机快速登录 >"/>
+</RelativeLayout>
+

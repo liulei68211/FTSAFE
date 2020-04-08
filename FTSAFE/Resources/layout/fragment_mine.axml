@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#efefef">
+	<LinearLayout
+		 android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+		 android:orientation="vertical"
+		android:background = "#37A2E8">
+		<GridLayout 
+			android:id="@+id/GridLayout1"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:columnCount="2"
+			android:orientation="horizontal"
+			android:layout_marginLeft="30dp"
+			android:rowCount="2">
+		<Button
+			android:layout_gravity="fill"
+			android:layout_rowSpan="2"
+			android:enabled="false"
+			android:layout_width="64dp"
+			android:layout_height="64dp"
+			android:drawableTop ="@drawable/mineImg"
+			android:background ="@drawable/button_circle"
+			android:layout_marginTop="10dp"
+			android:text="" />
+		<TextView
+			android:layout_columnSpan="1"
+			android:layout_gravity="fill"
+			android:text="账号名称"
+			android:textColor="#ffffff"
+				android:layout_marginTop ="15dp"
+				   android:layout_marginLeft = "15dp"
+			android:textSize="17sp" />
+		<TextView
+				android:layout_columnSpan="1"
+				android:layout_gravity="fill"
+				android:ems="8"
+				android:layout_marginTop="5dp"
+				android:text="17603902692"
+					android:textColor="#ffffff"
+				   android:layout_marginLeft = "15dp"
+				android:textSize="15sp" />
+   	</GridLayout>
+		<GridLayout 
+			android:id="@+id/gridLayout1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft ="30dp"
+			android:layout_marginTop="15dp"
+			android:layout_marginRight ="30dp"
+			android:layout_marginBottom="50dp"
+			android:columnCount="4"
+			android:rowCount="1">
+			<TextView
+				android:layout_column = "0"
+				android:layout_columnWeight = "1"
+				android:textSize = "14sp"
+				android:textColor ="#ffffff"
+				android:gravity="center"
+				android:text ="22"
+				android:id="@id/txt_1"/>
+			<TextView
+				android:layout_column = "1"
+				android:layout_columnWeight = "1"
+				android:textSize = "14sp"
+				android:textColor ="#ffffff"
+				android:gravity="center"
+				android:text ="35"
+				android:id="@id/txt_1"/>
+			<TextView
+				android:layout_column = "2"
+				android:layout_columnWeight = "1"
+				android:textSize = "14sp"
+				android:textColor ="#ffffff"
+				android:gravity="center"
+				android:text ="55"
+				android:id="@id/txt_1"/>
+			<TextView
+				android:layout_column = "3"
+				android:layout_columnWeight = "1"
+				android:textSize = "14sp"
+				android:textColor ="#ffffff"
+				android:gravity="center"
+				android:text ="555"
+				android:id="@id/txt_1"/>
+			<TextView
+				android:layout_column = "0"
+				android:layout_columnWeight = "1"
+				android:textSize = "14sp"
+				android:textColor ="#ffffff"
+				android:gravity="left"
+				android:layout_marginTop = "10dp"
+				android:text ="已上报隐患"/>
+			<TextView
+				android:layout_column = "1"
+				android:layout_columnWeight = "1"
+				android:textSize = "14sp"
+				android:textColor ="#ffffff"
+				android:gravity="left"
+				android:layout_marginTop = "10dp"
+				android:layout_marginLeft = "10dp"
+				android:text ="待整改隐患"/>
+			<TextView
+				android:layout_column = "2"
+				android:layout_columnWeight = "1"
+				android:textSize = "14sp"
+				android:textColor ="#ffffff"
+				android:layout_marginTop = "10dp"
+				android:layout_marginLeft = "10dp"
+				android:gravity="left"
+				android:text ="待复查隐患"/>
+			<TextView
+				android:layout_column = "3"
+				android:layout_columnWeight = "1"
+				android:textSize = "14sp"
+				android:textColor ="#ffffff"
+				android:gravity="left"
+				android:layout_marginTop = "10dp"
+				android:layout_marginLeft = "10dp"
+				android:text ="已完成隐患"/>
+		</GridLayout>
+	</LinearLayout>
+	<LinearLayout
+		 android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+		 android:orientation="vertical"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_marginTop="-30dp"
+		android:background ="@drawable/viewlayout">
+		<TextView 
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft ="15dp"
+			android:layout_marginTop="15dp"
+			android:textColor = "#000000"
+			android:textSize ="16dp"
+			android:text ="我的信息"/>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="2dp"
+			android:layout_marginTop = "10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:id="@+id/viewPage"
+			android:background="#efefef">
+		</View>
+		<LinearLayout
+			android:id="@+id/layoutSurvey"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation = "horizontal"
+			android:gravity="center_vertical"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:background ="@drawable/viewlayout">
+			<TextView
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content"
+					 android:text="姓名"
+					 android:layout_weight ="1"
+					 android:textSize="14sp" />
+		    <TextView
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"
+					  android:text="张三"
+					  android:layout_weight ="1"
+					  android:gravity ="right"
+					  android:textSize="14sp" />
+        </LinearLayout>
+		<LinearLayout
+        android:id="@+id/layoutSurvey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+		android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+			android:layout_marginBottom ="30dp"
+		android:background ="@drawable/viewlayout">
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="部门"
+		     android:layout_weight ="1"
+             android:textSize="14sp" />
+		 <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="运行科磷酸车间"
+		      android:layout_weight ="1"
+			  android:gravity ="right"
+              android:textSize="14sp" />
+            </LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+		 android:layout_width="match_parent"
+         android:layout_height="60dp"
+		 android:orientation="vertical"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_marginTop ="15dp"
+		android:background ="@drawable/viewlayout">
+		<TextView 
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft ="15dp"
+			android:layout_marginTop="15dp"
+			android:textColor = "#000000"
+			android:textSize ="16dp"
+			android:text ="统计管理"/>
+			<View
+			android:layout_width="match_parent"
+			android:layout_height="2dp"
+			android:layout_marginTop = "5dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:id="@+id/viewPage"
+			android:background="#efefef">
+		</View>
+	</LinearLayout>	
+	<LinearLayout
+		 android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+		 android:orientation="vertical"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_marginTop ="15dp"
+		android:background ="@drawable/viewlayout">
+		<TextView 
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft ="15dp"
+			android:layout_marginTop = "20dp"
+			android:textColor = "#000000"
+			android:textSize ="16dp"
+			android:text ="最新消息"/>
+			<View
+			android:layout_width="match_parent"
+			android:layout_height="2dp"
+			android:layout_marginTop = "5dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:id="@+id/viewPage"
+			android:background="#efefef">
+			</View>
+		<TextView 
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft ="15dp"
+			android:textColor = "#000000"
+			android:textSize ="16dp"
+			android:text ="最新制度"/>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="2dp"
+			android:layout_marginTop = "5dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:id="@+id/viewPage"
+			android:background="#efefef">
+		</View>
+		<TextView 
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft ="15dp"
+			android:textColor = "#000000"
+			android:textSize ="16dp"
+			android:text ="密码修改"/>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="2dp"
+			android:layout_marginTop = "5dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:id="@+id/viewPage"
+			android:background="#efefef">
+		</View>
+		<TextView 
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft ="15dp"
+			android:textColor = "#000000"
+			android:textSize ="16dp"
+			android:text ="版本更新"
+		/>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+				app:titleTextAppearance = "@style/Toolbar.TitleText"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+	<ScrollView 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below = "@+id/imgView1"
+		android:layout_marginTop="45dp"
+		android:layout_marginBottom="25dp"
+		android:scrollbars ="vertical"
+		android:fadingEdge ="vertical">
+		<RelativeLayout 
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<GridLayout 
+				android:id="@+id/GridLayout1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:columnCount="2"
+				android:orientation="horizontal"
+				android:rowCount="2">
+				<!--整改率统计-->
+				<TextView  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:text="隐患整改率统计"
+					android:textColor="#332F30"
+					android:layout_marginTop ="15dp"
+					android:background = "#efefef"
+					android:paddingTop ="10dp"
+					android:paddingBottom ="10dp"
+					android:paddingLeft ="15dp"
+					android:textSize="16sp"/>
+				<TextView
+					android:layout_gravity="fill"
+					android:layout_rowSpan="2"
+					android:gravity ="center"
+					android:background ="@drawable/count_1_new"
+					android:layout_marginTop ="5dp"
+					android:layout_marginLeft ="15dp"
+					android:id="@+id/ttxtCount_1"/>
+				<TextView
+					android:layout_columnSpan="1"
+					android:layout_gravity="fill"
+					android:text="公司隐患整改率统计"
+					android:textColor="#424041"
+					android:layout_marginTop ="10dp"
+					android:textSize="14sp" 
+					android:layout_marginLeft ="10dp"
+					android:clickable ="true"
+					android:id="@+id/txt_1"/>
+				<View  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginTop ="5dp"
+					android:background="#D6D7D7"  />  
+				<TextView
+					android:layout_gravity="fill"
+					android:layout_marginTop ="5dp"
+					android:layout_rowSpan="2"
+					android:layout_marginLeft ="15dp"
+					android:background ="@drawable/count_2_new"
+					android:gravity ="center"
+					android:id="@+id/btCount_2"/>
+				<TextView
+					android:layout_columnSpan="1"
+					android:layout_gravity="fill"
+					android:text="科室(分厂)隐患整改率统计"
+					android:textColor="#424041"
+					android:layout_marginTop ="10dp"
+					android:textSize="14sp"
+					android:layout_marginLeft ="10dp"
+					android:clickable ="true"
+					android:id="@+id/txt_2"/>
+			    <View  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginTop ="5dp"
+					android:background="#D6D7D7"  />  
+				<TextView
+					android:layout_gravity="fill"
+					android:layout_marginTop ="5dp"
+					android:layout_rowSpan="2"
+					android:gravity ="center"
+					android:layout_marginLeft ="15dp"
+					android:background="@drawable/count_3_new"
+					android:text="" />
+				<TextView
+					android:layout_columnSpan="1"
+					android:layout_gravity="fill"
+					android:text="车间隐患整改率统计"
+					android:textColor="#424041"
+					android:layout_marginTop ="10dp"
+				    android:textSize="14sp" 
+					android:clickable ="true"
+					android:layout_marginLeft ="10dp"
+					android:id="@+id/txt_3"/>
+				<View  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginTop ="5dp"
+					android:background="#D6D7D7"  />  
+				<!--隐患数量统计-->
+				<TextView  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:text="隐患统计"
+					android:textColor="#332F30"
+					android:background = "#efefef"
+					android:paddingTop ="10dp"
+					android:paddingBottom ="10dp"
+					android:paddingLeft ="15dp"
+					android:textSize="16sp" 
+					android:clickable ="true"
+					android:id="@+id/txt_4"/>
+				<TextView
+					android:layout_gravity="fill"
+					android:layout_rowSpan="2"
+					android:layout_marginTop ="5dp"
+					android:gravity ="center"
+					android:layout_marginLeft ="15dp"
+					android:background="@drawable/count_4_new"
+					android:text="" />
+				<TextView
+					android:layout_columnSpan="1"
+					android:layout_gravity="fill"
+					android:text="公司隐患统计"
+					android:textColor="#424041"
+					android:layout_marginTop ="10dp"
+					android:textSize="14sp" 
+					android:layout_marginLeft ="10dp"
+					android:clickable ="true"
+					android:id="@+id/txt_5"/>
+				<View  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginTop ="5dp"
+					android:background="#D6D7D7"  />    
+				<TextView
+					android:layout_gravity="fill"
+					android:layout_rowSpan="2"
+					android:layout_marginTop ="5dp"
+					android:layout_marginLeft ="15dp"
+					android:gravity ="center"
+					android:background="@drawable/count_5_new"
+					android:text="" />
+				<TextView
+					android:layout_columnSpan="1"
+					android:layout_gravity="fill"
+					android:text="科室(分厂)隐患统计"
+					android:textColor="#424041"
+					android:layout_marginTop ="10dp"
+				    android:textSize="14sp" 
+					android:layout_marginLeft ="10dp"
+					android:clickable ="true"
+					android:id="@+id/txt_6"/>
+				<View  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginTop ="5dp"
+					android:background="#D6D7D7"  />  
+				<TextView
+					android:layout_gravity="fill"
+					android:layout_rowSpan="2"
+					android:layout_marginTop ="5dp"
+			        android:layout_marginLeft ="15dp"
+					android:gravity ="center"
+					android:background="@drawable/count_6_new"
+					android:text="" />
+				<TextView
+					android:layout_columnSpan="1"
+					android:layout_gravity="fill"
+					android:text="车间隐患统计"
+					android:textColor="#424041"
+					android:layout_marginLeft ="10dp"
+					android:layout_marginTop ="10dp"
+					android:textSize="14sp" 
+					android:clickable ="true"
+					android:id="@+id/txt_7"/>
+				<View  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginTop ="5dp"
+					android:background="#D6D7D7"  />  
+				<!--隐患排查方式统计-->
+				<TextView  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:text="隐患排查方式统计"
+					android:textColor="#332F30"
+					android:background = "#efefef"
+					android:paddingTop ="10dp"
+					android:paddingBottom ="10dp"
+					android:paddingLeft ="15dp"
+					android:clickable ="true"
+					android:textSize="16sp" />
+				<TextView
+					android:layout_gravity="fill"
+					android:layout_rowSpan="2"
+					android:layout_marginTop ="5dp"
+			     	android:layout_marginLeft ="15dp"
+					android:gravity ="center"
+					android:background="@drawable/count_7_new"
+					android:text="" />
+				<TextView
+					android:layout_columnSpan="1"
+					android:layout_gravity="fill"
+					android:text="公司隐患排查方式统计"
+					android:textColor="#424041"
+					android:layout_marginLeft ="10dp"
+					android:layout_marginTop ="10dp"
+					android:textSize="14sp"
+					android:clickable ="true"
+					android:id="@+id/txt_8"/>
+				<View  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginTop ="5dp"
+					android:background="#D6D7D7"  />  
+				<TextView
+					android:layout_gravity="fill"
+					android:layout_rowSpan="2"
+					android:layout_marginTop ="5dp"
+				    android:layout_marginLeft ="15dp"
+					android:gravity ="center"
+					android:background="@drawable/count_8_new"
+					android:text="" />
+				<TextView
+					android:layout_columnSpan="1"
+					android:layout_gravity="fill"
+					android:layout_marginLeft ="10dp"
+					android:text="科室(分厂)隐患排查方式统计"
+					android:textColor="#424041"
+					android:layout_marginTop ="10dp"
+					android:clickable ="true"
+				    android:textSize="14sp"
+					android:id="@+id/txt_9"/>
+				<View  
+					android:layout_columnSpan="2"
+					android:layout_gravity="fill"
+					android:layout_height="1px" 
+					android:layout_marginTop ="5dp"
+					android:background="#D6D7D7"  />  
+				<TextView
+					android:layout_gravity="fill"
+					android:layout_rowSpan="2"
+					android:layout_marginTop ="5dp"
+	                android:layout_marginLeft ="15dp"
+					android:gravity ="center"
+					android:background="@drawable/count_9_new" />
+				<TextView
+					android:layout_columnSpan="1"
+					android:layout_gravity="fill"
+					android:text="车间隐患排查方式统计"
+					android:textColor="#424041"
+					android:clickable ="true"
+					android:layout_marginTop ="10dp"
+					android:layout_marginLeft ="10dp"
+					android:textSize="14sp" />
+   			</GridLayout>
+		</RelativeLayout>
+	</ScrollView>		
+</android.support.design.widget.CoordinatorLayout>
