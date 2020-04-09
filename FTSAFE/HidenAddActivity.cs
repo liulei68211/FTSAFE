@@ -33,8 +33,10 @@ namespace FTSAFE
         private EditText edit_person;
         private EditText edit_time;
         private EditText edit_dept;
+        private EditText edit_level;//隐患级别
         private int partolModeID = 0;
         private int hidenTypeID = 0;
+        private int hidenAdressID = 0;
         private Button btSub = null;
         private int isCamera = 0;//判断是否拍照
         protected override void OnCreate(Bundle savedInstanceState)
@@ -75,10 +77,7 @@ namespace FTSAFE
             XmlDBClass.departName = Intent.GetStringExtra("departName");
             XmlDBClass.userName = Intent.GetStringExtra("userName");
             XmlDBClass.isBig = Convert.ToInt32(Intent.GetStringExtra("isBig"));
-            if (XmlDBClass.isBig == 0)
-            {
-                string DDDD = "";
-            }
+           
              btSub = FindViewById<Button>(Resource.Id.btSub);
             btSub.Click += btSub_Click;
 
@@ -113,8 +112,19 @@ namespace FTSAFE
             edit_person = FindViewById<EditText>(Resource.Id.editName);
             edit_person.Text = XmlDBClass.userName;
             edit_person.ClearFocus();
+            edit_person.Enabled = false;//排查人为默认 不可编辑
             edit_time = FindViewById<EditText>(Resource.Id.txtTime);
             edit_time.Text = string.Format("{0:yyyy-MM-dd}", DateTime.Now);
+            //隐患级别
+            edit_level = FindViewById<EditText>(Resource.Id.editLevel);
+            if (XmlDBClass.isBig == 0)
+            {
+                edit_level.Text = "一般";
+            }
+            else
+            {
+                edit_level.Text = "重大";
+            }
             //排查单位
             edit_dept = FindViewById<EditText>(Resource.Id.textDept);
             edit_dept.Text = XmlDBClass.departName;
@@ -125,10 +135,14 @@ namespace FTSAFE
              */
             Spinner spinner_mode = FindViewById<Spinner>(Resource.Id.spinerMode);
             Spinner spinner_type = FindViewById<Spinner>(Resource.Id.spinerType);
-            Spinner spinner_level = FindViewById<Spinner>(Resource.Id.spinerLevel);
+            //隐患所属部门
+            Spinner spinner_adress = FindViewById<Spinner>(Resource.Id.spinnerAdress);
 
             List<string> partolTypeList = selectPartolType();
             List<string> hidenTypeList = selectHidenType();
+            List<string> hidenAdresList = selectHidenAdress();
+            //查询隐患所属部门 只查找安全科以下的 不包含岗位
+            List<string> hidenAdressList = selectHidenAdress();
             //spinner新样式
             //绑定xml文件数据 排查方式
             // ArrayAdapter adapter_mode = ArrayAdapter.CreateFromResource(this, Resource.Array.hidenMode, Resource.Layout.spinner_item);
@@ -143,10 +157,11 @@ namespace FTSAFE
             adapter_type.SetDropDownViewResource(Resource.Layout.dropdown_style);
             spinner_type.Adapter = adapter_type;
             spinner_type.ItemSelected += spinner_type_ItemSelected;
-            //隐患级别
-            ArrayAdapter adapter_level = ArrayAdapter.CreateFromResource(this, Resource.Array.hidenLevel, Resource.Layout.spinner_item);
-            adapter_level.SetDropDownViewResource(Resource.Layout.dropdown_style);
-            spinner_level.Adapter = adapter_level;
+            //绑定隐患所属部门 数据库数据
+            ArrayAdapter<string> adapter_adress = new ArrayAdapter<string>(this, Resource.Layout.spinner_item, hidenAdresList);
+            adapter_adress.SetDropDownViewResource(Resource.Layout.dropdown_style);
+            spinner_adress.Adapter = adapter_adress;
+            spinner_adress.ItemSelected += spinner_adress_ItemSelected;
             #region 绑定数据库数据
             //ArrayAdapter<string> adapter_mode = new ArrayAdapter<string>(this, Resource.Layout.spinner_item, carList);
             //adapter_mode.SetDropDownViewResource(Resource.Layout.dropdown_style);
@@ -154,6 +169,34 @@ namespace FTSAFE
             //spinner_mode.ItemSelected += spinnerMode_ItemSelected
             #endregion
         }
+
+        #region 查询隐患所属部门
+        private List<string> selectHidenAdress()
+        {
+            SafeWeb.JGNP safeWeb = new SafeWeb.JGNP();
+            string revXML = "";
+            List<string> hidenAdressList = new List<string>();
+            try
+            {
+                revXML = safeWeb.select_hidenAdress(XmlDBClass.accID, XmlDBClass.accCode);
+                if (revXML != "")
+                {
+                    //xml转table
+                    DataTable dt = XmlDBClass.ConvertXMLToDataTable(revXML);
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        hidenAdressList.Add(dt.Rows[i]["name"].ToString());
+                    }
+                }
+            }
+            catch (Exception ex )
+            {
+                CommonFunction.ShowMessage(ex.Message,this,true);
+            }
+            return hidenAdressList
+        }
+        #endregion
 
         #region 点击图片放大
         private void imgviewBig_Click(object sender,EventArgs e)
@@ -255,6 +298,23 @@ namespace FTSAFE
         }
         #endregion
 
+        #region 隐患所属部门选择事件
+        private void spinner_adress_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            SafeWeb.JGNP safeWeb = new SafeWeb.JGNP();
+            //根据车号查询 list路线
+            var CurSpinner = (Spinner)sender;
+            try
+            {
+                hidenAdressID = safeWeb.select_hidenAdressID(XmlDBClass.accID,CurSpinner.SelectedItem.ToString());
+            }
+            catch (Exception ex)
+            {
+                CommonFunction.ShowMessage(ex.Message,this,true);
+            }
+        }
+        #endregion
+
         #region 照相机返回结果
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
@@ -332,7 +392,7 @@ namespace FTSAFE
         
             SafeWeb.JGNP safeWeb = new SafeWeb.JGNP();
             EditText edit_info = FindViewById<EditText>(Resource.Id.editInfo);
-            Spinner spinner_level = FindViewById<Spinner>(Resource.Id.spinerLevel);
+        
             try
             {
                 if (isCamera == 1 && edit_info.Text != "")
@@ -359,13 +419,14 @@ namespace FTSAFE
                     listName.Add("cImgName");//图片名称
                     listName.Add("cImgBytes");//图片字节流
                     listName.Add("departID");//图片字节流
+                    //listName.Add("iHidenAdress");//隐患所属部门
 
                     listData.Add(XmlDBClass.userID.ToString());
                     listData.Add(edit_person.Text);
                     listData.Add(string.Format("{0:yyyy-MM-dd HH:mm:ss}", DateTime.Now));
                     listData.Add(partolModeID.ToString());
                     listData.Add(hidenTypeID.ToString());
-                    listData.Add(spinner_level.SelectedItem.ToString());
+                    listData.Add(edit_level.Text);
                     listData.Add(edit_info.Text);
                     listData.Add(XmlDBClass.accID.ToString());
                     listData.Add(web_time + '/' + XmlDBClass.companyName + '/' + XmlDBClass.departName + "/"); //图片文件夹名称

@@ -2628,17 +2628,17 @@ namespace FTSAFE
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7F020054
-			public const int abarDepatName = 2130837588;
+			// aapt resource value: 0x7F020055
+			public const int abarDepatName = 2130837589;
+			
+			// aapt resource value: 0x7F020058
+			public const int abarRequest = 2130837592;
 			
 			// aapt resource value: 0x7F020057
-			public const int abarRequest = 2130837591;
+			public const int abarTime = 2130837591;
 			
 			// aapt resource value: 0x7F020056
-			public const int abarTime = 2130837590;
-			
-			// aapt resource value: 0x7F020055
-			public const int abarTypeName = 2130837589;
+			public const int abarTypeName = 2130837590;
 			
 			// aapt resource value: 0x7F0C0001
 			public const int action0 = 2131492865;
@@ -2709,11 +2709,11 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C0006
 			public const int async = 2131492870;
 			
-			// aapt resource value: 0x7F020058
-			public const int auitDepartName = 2130837592;
-			
 			// aapt resource value: 0x7F020059
-			public const int auitMemos = 2130837593;
+			public const int auitDepartName = 2130837593;
+			
+			// aapt resource value: 0x7F020060
+			public const int auitMemos = 2130837600;
 			
 			// aapt resource value: 0x7F0C0018
 			public const int auto = 2131492888;
@@ -2727,71 +2727,71 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020027
 			public const int btAnnormal = 2130837543;
 			
-			// aapt resource value: 0x7F020060
-			public const int btAuit = 2130837600;
-			
 			// aapt resource value: 0x7F020061
-			public const int btAuitNo = 2130837601;
+			public const int btAuit = 2130837601;
 			
-			// aapt resource value: 0x7F020047
-			public const int btCamera = 2130837575;
+			// aapt resource value: 0x7F020062
+			public const int btAuitNo = 2130837602;
 			
-			// aapt resource value: 0x7F020137
-			public const int btChange = 2130837815;
+			// aapt resource value: 0x7F020048
+			public const int btCamera = 2130837576;
 			
-			// aapt resource value: 0x7F020144
-			public const int btCheckTime = 2130837828;
+			// aapt resource value: 0x7F020138
+			public const int btChange = 2130837816;
 			
-			// aapt resource value: 0x7F020168
-			public const int btCount_2 = 2130837864;
+			// aapt resource value: 0x7F020145
+			public const int btCheckTime = 2130837829;
 			
-			// aapt resource value: 0x7F020071
-			public const int btEndTm = 2130837617;
+			// aapt resource value: 0x7F020169
+			public const int btCount_2 = 2130837865;
 			
-			// aapt resource value: 0x7F020112
-			public const int btExit = 2130837778;
+			// aapt resource value: 0x7F020072
+			public const int btEndTm = 2130837618;
 			
-			// aapt resource value: 0x7F020131
-			public const int btInfo = 2130837809;
+			// aapt resource value: 0x7F020113
+			public const int btExit = 2130837779;
+			
+			// aapt resource value: 0x7F020132
+			public const int btInfo = 2130837810;
 			
 			// aapt resource value: 0x7F020026
 			public const int btNormal = 2130837542;
 			
-			// aapt resource value: 0x7F020130
-			public const int btSign = 2130837808;
+			// aapt resource value: 0x7F020131
+			public const int btSign = 2130837809;
 			
-			// aapt resource value: 0x7F020070
-			public const int btStartTm = 2130837616;
+			// aapt resource value: 0x7F020071
+			public const int btStartTm = 2130837617;
 			
-			// aapt resource value: 0x7F020049
-			public const int btSub = 2130837577;
+			// aapt resource value: 0x7F020050
+			public const int btSub = 2130837584;
 			
-			// aapt resource value: 0x7F020136
-			public const int btUp = 2130837814;
-			
-			// aapt resource value: 0x7F020176
-			public const int bt_0 = 2130837878;
+			// aapt resource value: 0x7F020137
+			public const int btUp = 2130837815;
 			
 			// aapt resource value: 0x7F020177
-			public const int bt_1 = 2130837879;
+			public const int bt_0 = 2130837879;
 			
 			// aapt resource value: 0x7F020178
-			public const int bt_2 = 2130837880;
+			public const int bt_1 = 2130837880;
 			
 			// aapt resource value: 0x7F020179
-			public const int bt_3 = 2130837881;
+			public const int bt_2 = 2130837881;
 			
-			// aapt resource value: 0x7F020090
-			public const int bt_login = 2130837648;
+			// aapt resource value: 0x7F020180
+			public const int bt_3 = 2130837888;
 			
-			// aapt resource value: 0x7F020159
-			public const int button1 = 2130837849;
+			// aapt resource value: 0x7F020091
+			public const int bt_login = 2130837649;
+			
+			// aapt resource value: 0x7F020160
+			public const int button1 = 2130837856;
 			
 			// aapt resource value: 0x7F0C001B
 			public const int buttonPanel = 2131492891;
 			
-			// aapt resource value: 0x7F020162
-			public const int but_check = 2130837858;
+			// aapt resource value: 0x7F020163
+			public const int but_check = 2130837859;
 			
 			// aapt resource value: 0x7F0C001C
 			public const int cancel_action = 2131492892;
@@ -2799,8 +2799,8 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C001D
 			public const int center = 2131492893;
 			
-			// aapt resource value: 0x7F020129
-			public const int check1 = 2130837801;
+			// aapt resource value: 0x7F020130
+			public const int check1 = 2130837808;
 			
 			// aapt resource value: 0x7F0C001E
 			public const int checkbox = 2131492894;
@@ -2811,14 +2811,14 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020028
 			public const int container = 2130837544;
 			
-			// aapt resource value: 0x7F020174
-			public const int containerView = 2130837876;
+			// aapt resource value: 0x7F020175
+			public const int containerView = 2130837877;
 			
-			// aapt resource value: 0x7F020097
-			public const int containView = 2130837655;
+			// aapt resource value: 0x7F020098
+			public const int containView = 2130837656;
 			
-			// aapt resource value: 0x7F020346
-			public const int contentFrame = 2130838342;
+			// aapt resource value: 0x7F020347
+			public const int contentFrame = 2130838343;
 			
 			// aapt resource value: 0x7F0C0021
 			public const int contentPanel = 2131492897;
@@ -2853,47 +2853,50 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C002B
 			public const int design_navigation_view = 2131492907;
 			
-			// aapt resource value: 0x7F020141
-			public const int editCheckPerson = 2130837825;
-			
 			// aapt resource value: 0x7F020142
-			public const int editCheckPerson2 = 2130837826;
+			public const int editCheckPerson = 2130837826;
 			
-			// aapt resource value: 0x7F020046
-			public const int editInfo = 2130837574;
+			// aapt resource value: 0x7F020143
+			public const int editCheckPerson2 = 2130837827;
+			
+			// aapt resource value: 0x7F020047
+			public const int editInfo = 2130837575;
+			
+			// aapt resource value: 0x7F020044
+			public const int editLevel = 2130837572;
 			
 			// aapt resource value: 0x7F020040
 			public const int editName = 2130837568;
 			
-			// aapt resource value: 0x7F020134
-			public const int editPassSure = 2130837812;
+			// aapt resource value: 0x7F020135
+			public const int editPassSure = 2130837813;
 			
-			// aapt resource value: 0x7F020066
-			public const int editRequest = 2130837606;
+			// aapt resource value: 0x7F020067
+			public const int editRequest = 2130837607;
 			
-			// aapt resource value: 0x7F020143
-			public const int editResult = 2130837827;
-			
-			// aapt resource value: 0x7F020149
-			public const int editReviewPerson = 2130837833;
+			// aapt resource value: 0x7F020144
+			public const int editResult = 2130837828;
 			
 			// aapt resource value: 0x7F020150
-			public const int editReviewResult = 2130837840;
+			public const int editReviewPerson = 2130837840;
 			
 			// aapt resource value: 0x7F020151
-			public const int editReviewTime = 2130837841;
+			public const int editReviewResult = 2130837841;
 			
-			// aapt resource value: 0x7F020065
-			public const int editTime = 2130837605;
+			// aapt resource value: 0x7F020152
+			public const int editReviewTime = 2130837842;
 			
-			// aapt resource value: 0x7F020087
-			public const int edit_pass = 2130837639;
+			// aapt resource value: 0x7F020066
+			public const int editTime = 2130837606;
+			
+			// aapt resource value: 0x7F020088
+			public const int edit_pass = 2130837640;
 			
 			// aapt resource value: 0x7F0C002C
 			public const int edit_query = 2131492908;
 			
-			// aapt resource value: 0x7F020086
-			public const int edit_user = 2130837638;
+			// aapt resource value: 0x7F020087
+			public const int edit_user = 2130837639;
 			
 			// aapt resource value: 0x7F0C002D
 			public const int end = 2131492909;
@@ -2916,44 +2919,44 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C0009
 			public const int forever = 2131492873;
 			
-			// aapt resource value: 0x7F020113
-			public const int FramePage = 2130837779;
+			// aapt resource value: 0x7F020114
+			public const int FramePage = 2130837780;
 			
 			// aapt resource value: 0x7F0C0034
 			public const int ghost_view = 2131492916;
 			
-			// aapt resource value: 0x7F020100
-			public const int GridLayout1 = 2130837760;
-			
 			// aapt resource value: 0x7F020005
 			public const int gridLayout1 = 2130837509;
 			
-			// aapt resource value: 0x7F020180
-			public const int GridLayout2 = 2130837888;
+			// aapt resource value: 0x7F020101
+			public const int GridLayout1 = 2130837761;
 			
-			// aapt resource value: 0x7F020193
-			public const int GridLayout222 = 2130837907;
+			// aapt resource value: 0x7F020181
+			public const int GridLayout2 = 2130837889;
 			
-			// aapt resource value: 0x7F020183
-			public const int GridLayout3 = 2130837891;
+			// aapt resource value: 0x7F020194
+			public const int GridLayout222 = 2130837908;
 			
-			// aapt resource value: 0x7F020186
-			public const int GridLayout4 = 2130837894;
+			// aapt resource value: 0x7F020184
+			public const int GridLayout3 = 2130837892;
 			
-			// aapt resource value: 0x7F020099
-			public const int headView = 2130837657;
+			// aapt resource value: 0x7F020187
+			public const int GridLayout4 = 2130837895;
 			
-			// aapt resource value: 0x7F020052
-			public const int hidenDepart = 2130837586;
+			// aapt resource value: 0x7F020100
+			public const int headView = 2130837760;
 			
 			// aapt resource value: 0x7F020053
-			public const int hidenInfo = 2130837587;
+			public const int hidenDepart = 2130837587;
 			
-			// aapt resource value: 0x7F020192
-			public const int hidenMsg = 2130837906;
+			// aapt resource value: 0x7F020054
+			public const int hidenInfo = 2130837588;
 			
-			// aapt resource value: 0x7F020050
-			public const int hidenPerson = 2130837584;
+			// aapt resource value: 0x7F020193
+			public const int hidenMsg = 2130837907;
+			
+			// aapt resource value: 0x7F020051
+			public const int hidenPerson = 2130837585;
 			
 			// aapt resource value: 0x7F0C0035
 			public const int home = 2131492917;
@@ -2967,11 +2970,11 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C0038
 			public const int image = 2131492920;
 			
-			// aapt resource value: 0x7F020048
-			public const int imageHiden = 2130837576;
+			// aapt resource value: 0x7F020049
+			public const int imageHiden = 2130837577;
 			
-			// aapt resource value: 0x7F020145
-			public const int imageReform = 2130837829;
+			// aapt resource value: 0x7F020146
+			public const int imageReform = 2130837830;
 			
 			// aapt resource value: 0x7F020024
 			public const int imageView1 = 2130837540;
@@ -2991,41 +2994,41 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020029
 			public const int imgView1 = 2130837545;
 			
-			// aapt resource value: 0x7F020095
-			public const int img_equipment = 2130837653;
+			// aapt resource value: 0x7F020096
+			public const int img_equipment = 2130837654;
 			
-			// aapt resource value: 0x7F020182
-			public const int img_equi_partol = 2130837890;
+			// aapt resource value: 0x7F020183
+			public const int img_equi_partol = 2130837891;
 			
 			// aapt resource value: 0x7F020030
 			public const int img_hiden_add = 2130837552;
 			
-			// aapt resource value: 0x7F020184
-			public const int img_hiden_audit = 2130837892;
-			
 			// aapt resource value: 0x7F020185
-			public const int img_hiden_big = 2130837893;
+			public const int img_hiden_audit = 2130837893;
+			
+			// aapt resource value: 0x7F020186
+			public const int img_hiden_big = 2130837894;
 			
 			// aapt resource value: 0x7F020036
 			public const int img_hiden_check = 2130837558;
 			
-			// aapt resource value: 0x7F020189
-			public const int img_hiden_control = 2130837897;
-			
-			// aapt resource value: 0x7F020187
-			public const int img_hiden_danger = 2130837895;
-			
-			// aapt resource value: 0x7F020091
-			public const int img_hiden_end = 2130837649;
+			// aapt resource value: 0x7F020190
+			public const int img_hiden_control = 2130837904;
 			
 			// aapt resource value: 0x7F020188
-			public const int img_hiden_list = 2130837896;
+			public const int img_hiden_danger = 2130837896;
+			
+			// aapt resource value: 0x7F020092
+			public const int img_hiden_end = 2130837650;
+			
+			// aapt resource value: 0x7F020189
+			public const int img_hiden_list = 2130837897;
 			
 			// aapt resource value: 0x7F020031
 			public const int img_hiden_reform = 2130837553;
 			
-			// aapt resource value: 0x7F020094
-			public const int img_hiden_search = 2130837652;
+			// aapt resource value: 0x7F020095
+			public const int img_hiden_search = 2130837653;
 			
 			// aapt resource value: 0x7F020037
 			public const int img_hiden_seasrch = 2130837559;
@@ -3033,23 +3036,23 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020038
 			public const int img_hiden_statistics = 2130837560;
 			
-			// aapt resource value: 0x7F020092
-			public const int img_partol_add = 2130837650;
-			
 			// aapt resource value: 0x7F020093
-			public const int img_partol_record = 2130837651;
+			public const int img_partol_add = 2130837651;
+			
+			// aapt resource value: 0x7F020094
+			public const int img_partol_record = 2130837652;
 			
 			// aapt resource value: 0x7F020032
 			public const int img_preform_sure = 2130837554;
 			
-			// aapt resource value: 0x7F020096
-			public const int img_resim = 2130837654;
+			// aapt resource value: 0x7F020097
+			public const int img_resim = 2130837655;
 			
-			// aapt resource value: 0x7F020190
-			public const int img_ressim = 2130837904;
+			// aapt resource value: 0x7F020191
+			public const int img_ressim = 2130837905;
 			
-			// aapt resource value: 0x7F020181
-			public const int img_safe_partol = 2130837889;
+			// aapt resource value: 0x7F020182
+			public const int img_safe_partol = 2130837890;
 			
 			// aapt resource value: 0x7F0C000C
 			public const int info = 2131492876;
@@ -3060,20 +3063,20 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C003B
 			public const int item_touch_helper_previous_elevation = 2131492923;
 			
-			// aapt resource value: 0x7F020155
-			public const int iv_bg = 2130837845;
+			// aapt resource value: 0x7F020156
+			public const int iv_bg = 2130837846;
 			
 			// aapt resource value: 0x7F0C003C
 			public const int largeLabel = 2131492924;
 			
-			// aapt resource value: 0x7F020199
-			public const int large_image  = 2130837913;
+			// aapt resource value: 0x7F020200
+			public const int large_image  = 2130838016;
 			
-			// aapt resource value: 0x7F020164
-			public const int layoutOpenSourceUrl = 2130837860;
+			// aapt resource value: 0x7F020165
+			public const int layoutOpenSourceUrl = 2130837861;
 			
-			// aapt resource value: 0x7F020104
-			public const int layoutSurvey = 2130837764;
+			// aapt resource value: 0x7F020105
+			public const int layoutSurvey = 2130837765;
 			
 			// aapt resource value: 0x7F0C003D
 			public const int left = 2131492925;
@@ -3090,20 +3093,20 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020035
 			public const int linearBt2 = 2130837557;
 			
-			// aapt resource value: 0x7F020075
-			public const int linearInfo = 2130837621;
+			// aapt resource value: 0x7F020076
+			public const int linearInfo = 2130837622;
 			
 			// aapt resource value: 0x7F020023
 			public const int linearLayout3 = 2130837539;
 			
-			// aapt resource value: 0x7F020072
-			public const int linearPereson = 2130837618;
+			// aapt resource value: 0x7F020073
+			public const int linearPereson = 2130837619;
 			
-			// aapt resource value: 0x7F020068
-			public const int linearSelect = 2130837608;
+			// aapt resource value: 0x7F020069
+			public const int linearSelect = 2130837609;
 			
-			// aapt resource value: 0x7F020076
-			public const int linearTm = 2130837622;
+			// aapt resource value: 0x7F020077
+			public const int linearTm = 2130837623;
 			
 			// aapt resource value: 0x7F020033
 			public const int linearTxt = 2130837555;
@@ -3111,23 +3114,23 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020039
 			public const int linearTxt2 = 2130837561;
 			
-			// aapt resource value: 0x7F020195
-			public const int linearView_1 = 2130837909;
-			
 			// aapt resource value: 0x7F020196
-			public const int linearView_2 = 2130837910;
+			public const int linearView_1 = 2130837910;
 			
 			// aapt resource value: 0x7F020197
-			public const int linearView_3 = 2130837911;
+			public const int linearView_2 = 2130837911;
 			
-			// aapt resource value: 0x7F020107
-			public const int linearView_4 = 2130837767;
+			// aapt resource value: 0x7F020198
+			public const int linearView_3 = 2130837912;
 			
 			// aapt resource value: 0x7F020108
-			public const int linearView_5 = 2130837768;
+			public const int linearView_4 = 2130837768;
 			
-			// aapt resource value: 0x7F020111
-			public const int linearView_6 = 2130837777;
+			// aapt resource value: 0x7F020109
+			public const int linearView_5 = 2130837769;
+			
+			// aapt resource value: 0x7F020112
+			public const int linearView_6 = 2130837778;
 			
 			// aapt resource value: 0x7F0C0040
 			public const int listMode = 2131492928;
@@ -3138,11 +3141,11 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C0041
 			public const int list_item = 2131492929;
 			
-			// aapt resource value: 0x7F020102
-			public const int loginMobile = 2130837762;
+			// aapt resource value: 0x7F020103
+			public const int loginMobile = 2130837763;
 			
-			// aapt resource value: 0x7F020101
-			public const int loginName = 2130837761;
+			// aapt resource value: 0x7F020102
+			public const int loginName = 2130837762;
 			
 			// aapt resource value: 0x7F0C0042
 			public const int masked = 2131492930;
@@ -3156,29 +3159,29 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C0045
 			public const int mini = 2131492933;
 			
-			// aapt resource value: 0x7F020103
-			public const int minView = 2130837763;
+			// aapt resource value: 0x7F020104
+			public const int minView = 2130837764;
 			
 			// aapt resource value: 0x7F0C0046
 			public const int multiply = 2131492934;
 			
-			// aapt resource value: 0x7F020114
-			public const int navigation = 2130837780;
+			// aapt resource value: 0x7F020115
+			public const int navigation = 2130837781;
 			
-			// aapt resource value: 0x7F020203
-			public const int navigation_count = 2130838019;
+			// aapt resource value: 0x7F020204
+			public const int navigation_count = 2130838020;
 			
 			// aapt resource value: 0x7F0C0047
 			public const int navigation_header_container = 2131492935;
 			
-			// aapt resource value: 0x7F020202
-			public const int navigation_home = 2130838018;
-			
-			// aapt resource value: 0x7F020204
-			public const int navigation_message = 2130838020;
+			// aapt resource value: 0x7F020203
+			public const int navigation_home = 2130838019;
 			
 			// aapt resource value: 0x7F020205
-			public const int navigation_user = 2130838021;
+			public const int navigation_message = 2130838021;
+			
+			// aapt resource value: 0x7F020206
+			public const int navigation_user = 2130838022;
 			
 			// aapt resource value: 0x7F0C0048
 			public const int none = 2131492936;
@@ -3204,14 +3207,14 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C004F
 			public const int parent_matrix = 2131492943;
 			
-			// aapt resource value: 0x7F020191
-			public const int partolMsg = 2130837905;
+			// aapt resource value: 0x7F020192
+			public const int partolMsg = 2130837906;
+			
+			// aapt resource value: 0x7F020134
+			public const int passNew = 2130837812;
 			
 			// aapt resource value: 0x7F020133
-			public const int passNew = 2130837811;
-			
-			// aapt resource value: 0x7F020132
-			public const int passOld = 2130837810;
+			public const int passOld = 2130837811;
 			
 			// aapt resource value: 0x7F0C0050
 			public const int pin = 2131492944;
@@ -3225,11 +3228,11 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C0053
 			public const int radio = 2131492947;
 			
-			// aapt resource value: 0x7F020098
-			public const int relativeView = 2130837656;
+			// aapt resource value: 0x7F020099
+			public const int relativeView = 2130837657;
 			
-			// aapt resource value: 0x7F020088
-			public const int relayoutView = 2130837640;
+			// aapt resource value: 0x7F020089
+			public const int relayoutView = 2130837641;
 			
 			// aapt resource value: 0x7F0C0054
 			public const int right = 2131492948;
@@ -3261,8 +3264,8 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C005C
 			public const int scrollIndicatorUp = 2131492956;
 			
-			// aapt resource value: 0x7F020135
-			public const int scrollView = 2130837813;
+			// aapt resource value: 0x7F020136
+			public const int scrollView = 2130837814;
 			
 			// aapt resource value: 0x7F020014
 			public const int scrollView1 = 2130837524;
@@ -3315,35 +3318,35 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C006E
 			public const int spacer = 2131492974;
 			
-			// aapt resource value: 0x7F020064
-			public const int spinerAbarType = 2130837604;
+			// aapt resource value: 0x7F020065
+			public const int spinerAbarType = 2130837605;
 			
-			// aapt resource value: 0x7F020067
-			public const int spinerAuitDept = 2130837607;
+			// aapt resource value: 0x7F020068
+			public const int spinerAuitDept = 2130837608;
 			
-			// aapt resource value: 0x7F020152
-			public const int spinerExit = 2130837842;
+			// aapt resource value: 0x7F020153
+			public const int spinerExit = 2130837843;
 			
-			// aapt resource value: 0x7F020062
-			public const int spinerFac = 2130837602;
+			// aapt resource value: 0x7F020063
+			public const int spinerFac = 2130837603;
 			
-			// aapt resource value: 0x7F020044
-			public const int spinerLevel = 2130837572;
-			
-			// aapt resource value: 0x7F020154
-			public const int spinerLog = 2130837844;
+			// aapt resource value: 0x7F020155
+			public const int spinerLog = 2130837845;
 			
 			// aapt resource value: 0x7F020042
 			public const int spinerMode = 2130837570;
 			
-			// aapt resource value: 0x7F020153
-			public const int spinerPlan = 2130837843;
+			// aapt resource value: 0x7F020154
+			public const int spinerPlan = 2130837844;
 			
-			// aapt resource value: 0x7F020063
-			public const int spinerResponseName = 2130837603;
+			// aapt resource value: 0x7F020064
+			public const int spinerResponseName = 2130837604;
 			
 			// aapt resource value: 0x7F020043
 			public const int spinerType = 2130837571;
+			
+			// aapt resource value: 0x7F020046
+			public const int spinnerAdress = 2130837574;
 			
 			// aapt resource value: 0x7F0C006F
 			public const int split_action_bar = 2131492975;
@@ -3378,14 +3381,14 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C0017
 			public const int text2 = 2131492887;
 			
-			// aapt resource value: 0x7F020126
-			public const int textArea = 2130837798;
+			// aapt resource value: 0x7F020127
+			public const int textArea = 2130837799;
 			
 			// aapt resource value: 0x7F020041
 			public const int textDept = 2130837569;
 			
-			// aapt resource value: 0x7F020125
-			public const int textDeptValue = 2130837797;
+			// aapt resource value: 0x7F020126
+			public const int textDeptValue = 2130837798;
 			
 			// aapt resource value: 0x7F0C007D
 			public const int textinput_counter = 2131492989;
@@ -3402,20 +3405,20 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020013
 			public const int textView1 = 2130837523;
 			
-			// aapt resource value: 0x7F020085
-			public const int textView3 = 2130837637;
+			// aapt resource value: 0x7F020086
+			public const int textView3 = 2130837638;
 			
-			// aapt resource value: 0x7F020201
-			public const int textView32 = 2130838017;
+			// aapt resource value: 0x7F020202
+			public const int textView32 = 2130838018;
 			
-			// aapt resource value: 0x7F020166
-			public const int textView3333 = 2130837862;
+			// aapt resource value: 0x7F020167
+			public const int textView3333 = 2130837863;
 			
-			// aapt resource value: 0x7F020089
-			public const int textView4 = 2130837641;
+			// aapt resource value: 0x7F020090
+			public const int textView4 = 2130837648;
 			
-			// aapt resource value: 0x7F020051
-			public const int textView41 = 2130837585;
+			// aapt resource value: 0x7F020052
+			public const int textView41 = 2130837586;
 			
 			// aapt resource value: 0x7F0C007C
 			public const int text_input_password_toggle = 2131492988;
@@ -3423,8 +3426,8 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C0018
 			public const int time = 2131492888;
 			
-			// aapt resource value: 0x7F020156
-			public const int title = 2130837846;
+			// aapt resource value: 0x7F020157
+			public const int title = 2130837847;
 			
 			// aapt resource value: 0x7F0C0081
 			public const int titleDividerNoCustom = 2131492993;
@@ -3459,50 +3462,50 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C008A
 			public const int transition_transform = 2131493002;
 			
-			// aapt resource value: 0x7F020167
-			public const int ttxtCount_1 = 2130837863;
+			// aapt resource value: 0x7F020168
+			public const int ttxtCount_1 = 2130837864;
+			
+			// aapt resource value: 0x7F020159
+			public const int tv_download_progress = 2130837849;
 			
 			// aapt resource value: 0x7F020158
-			public const int tv_download_progress = 2130837848;
+			public const int tv_download_progressBar = 2130837848;
 			
-			// aapt resource value: 0x7F020157
-			public const int tv_download_progressBar = 2130837847;
+			// aapt resource value: 0x7F020195
+			public const int txt222 = 2130837909;
 			
-			// aapt resource value: 0x7F020194
-			public const int txt222 = 2130837908;
-			
-			// aapt resource value: 0x7F020198
-			public const int txtArea = 2130837912;
-			
-			// aapt resource value: 0x7F020138
-			public const int txtCheckFac = 2130837816;
-			
-			// aapt resource value: 0x7F020146
-			public const int txtCheckPerson = 2130837830;
-			
-			// aapt resource value: 0x7F020147
-			public const int txtCheckPerson_2 = 2130837831;
-			
-			// aapt resource value: 0x7F020140
-			public const int txtCheckRequest = 2130837824;
-			
-			// aapt resource value: 0x7F020148
-			public const int txtCheckTime = 2130837832;
+			// aapt resource value: 0x7F020199
+			public const int txtArea = 2130837913;
 			
 			// aapt resource value: 0x7F020139
-			public const int txtCheckType = 2130837817;
+			public const int txtCheckFac = 2130837817;
 			
-			// aapt resource value: 0x7F020122
-			public const int txtControl = 2130837794;
+			// aapt resource value: 0x7F020147
+			public const int txtCheckPerson = 2130837831;
 			
-			// aapt resource value: 0x7F020120
-			public const int txtDanger = 2130837792;
+			// aapt resource value: 0x7F020148
+			public const int txtCheckPerson_2 = 2130837832;
+			
+			// aapt resource value: 0x7F020141
+			public const int txtCheckRequest = 2130837825;
+			
+			// aapt resource value: 0x7F020149
+			public const int txtCheckTime = 2130837833;
+			
+			// aapt resource value: 0x7F020140
+			public const int txtCheckType = 2130837824;
+			
+			// aapt resource value: 0x7F020123
+			public const int txtControl = 2130837795;
+			
+			// aapt resource value: 0x7F020121
+			public const int txtDanger = 2130837793;
 			
 			// aapt resource value: 0x7F020009
 			public const int txtDepartPhone = 2130837513;
 			
-			// aapt resource value: 0x7F020083
-			public const int txtDept = 2130837635;
+			// aapt resource value: 0x7F020084
+			public const int txtDept = 2130837636;
 			
 			// aapt resource value: 0x7F020010
 			public const int txtEmergPhone = 2130837520;
@@ -3510,41 +3513,41 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020011
 			public const int txtFirePhone = 2130837521;
 			
-			// aapt resource value: 0x7F020084
-			public const int txtInfo = 2130837636;
+			// aapt resource value: 0x7F020085
+			public const int txtInfo = 2130837637;
 			
-			// aapt resource value: 0x7F020123
-			public const int txtLevel = 2130837795;
+			// aapt resource value: 0x7F020124
+			public const int txtLevel = 2130837796;
 			
-			// aapt resource value: 0x7F020175
-			public const int txtMsg = 2130837877;
+			// aapt resource value: 0x7F020176
+			public const int txtMsg = 2130837878;
 			
-			// aapt resource value: 0x7F020119
-			public const int txtObj = 2130837785;
+			// aapt resource value: 0x7F020120
+			public const int txtObj = 2130837792;
+			
+			// aapt resource value: 0x7F020081
+			public const int txtOrder = 2130837633;
 			
 			// aapt resource value: 0x7F020080
-			public const int txtOrder = 2130837632;
+			public const int txtOrderLabel = 2130837632;
 			
-			// aapt resource value: 0x7F020079
-			public const int txtOrderLabel = 2130837625;
-			
-			// aapt resource value: 0x7F020200
-			public const int txtPart = 2130838016;
-			
-			// aapt resource value: 0x7F020116
-			public const int txtPartolFac = 2130837782;
-			
-			// aapt resource value: 0x7F020115
-			public const int txtPartolPerson = 2130837781;
-			
-			// aapt resource value: 0x7F020118
-			public const int txtPartolStatus = 2130837784;
+			// aapt resource value: 0x7F020201
+			public const int txtPart = 2130838017;
 			
 			// aapt resource value: 0x7F020117
-			public const int txtPartolTime = 2130837783;
+			public const int txtPartolFac = 2130837783;
 			
-			// aapt resource value: 0x7F020082
-			public const int txtPerson = 2130837634;
+			// aapt resource value: 0x7F020116
+			public const int txtPartolPerson = 2130837782;
+			
+			// aapt resource value: 0x7F020119
+			public const int txtPartolStatus = 2130837785;
+			
+			// aapt resource value: 0x7F020118
+			public const int txtPartolTime = 2130837784;
+			
+			// aapt resource value: 0x7F020083
+			public const int txtPerson = 2130837635;
 			
 			// aapt resource value: 0x7F020008
 			public const int txtPersonLabel = 2130837512;
@@ -3552,17 +3555,17 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020007
 			public const int txtPhone = 2130837511;
 			
-			// aapt resource value: 0x7F020128
-			public const int txtSign = 2130837800;
+			// aapt resource value: 0x7F020129
+			public const int txtSign = 2130837801;
 			
-			// aapt resource value: 0x7F020121
-			public const int txtStand = 2130837793;
+			// aapt resource value: 0x7F020122
+			public const int txtStand = 2130837794;
 			
-			// aapt resource value: 0x7F020069
-			public const int txtStart = 2130837609;
+			// aapt resource value: 0x7F020070
+			public const int txtStart = 2130837616;
 			
-			// aapt resource value: 0x7F020081
-			public const int txtStatus = 2130837633;
+			// aapt resource value: 0x7F020082
+			public const int txtStatus = 2130837634;
 			
 			// aapt resource value: 0x7F020006
 			public const int txtStatusLabel = 2130837510;
@@ -3570,8 +3573,8 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020045
 			public const int txtTime = 2130837573;
 			
-			// aapt resource value: 0x7F020165
-			public const int txtType = 2130837861;
+			// aapt resource value: 0x7F020166
+			public const int txtType = 2130837862;
 			
 			// aapt resource value: 0x7F020018
 			public const int txt_1 = 2130837528;
@@ -3585,56 +3588,56 @@ namespace FTSAFE
 			// aapt resource value: 0x7F020022
 			public const int txt_4 = 2130837538;
 			
-			// aapt resource value: 0x7F020169
-			public const int txt_5 = 2130837865;
-			
 			// aapt resource value: 0x7F020170
-			public const int txt_6 = 2130837872;
+			public const int txt_5 = 2130837872;
 			
 			// aapt resource value: 0x7F020171
-			public const int txt_7 = 2130837873;
+			public const int txt_6 = 2130837873;
 			
 			// aapt resource value: 0x7F020172
-			public const int txt_8 = 2130837874;
+			public const int txt_7 = 2130837874;
 			
 			// aapt resource value: 0x7F020173
-			public const int txt_9 = 2130837875;
+			public const int txt_8 = 2130837875;
+			
+			// aapt resource value: 0x7F020174
+			public const int txt_9 = 2130837876;
 			
 			// aapt resource value: 0x7F020034
 			public const int txt_hiden = 2130837556;
 			
-			// aapt resource value: 0x7F020077
-			public const int txt_hidenTm = 2130837623;
-			
 			// aapt resource value: 0x7F020078
-			public const int txt_hidenTm_value = 2130837624;
+			public const int txt_hidenTm = 2130837624;
 			
-			// aapt resource value: 0x7F020073
-			public const int txt_hidenUser = 2130837619;
+			// aapt resource value: 0x7F020079
+			public const int txt_hidenTm_value = 2130837625;
 			
 			// aapt resource value: 0x7F020074
-			public const int txt_hidenUser_value = 2130837620;
+			public const int txt_hidenUser = 2130837620;
 			
-			// aapt resource value: 0x7F020124
-			public const int txt_partolUser = 2130837796;
+			// aapt resource value: 0x7F020075
+			public const int txt_hidenUser_value = 2130837621;
 			
-			// aapt resource value: 0x7F020109
-			public const int txt_passModify = 2130837769;
-			
-			// aapt resource value: 0x7F020127
-			public const int txt_Time = 2130837799;
-			
-			// aapt resource value: 0x7F020163
-			public const int txt_user = 2130837859;
-			
-			// aapt resource value: 0x7F020160
-			public const int txt_userName = 2130837856;
-			
-			// aapt resource value: 0x7F020161
-			public const int txt_userPhone = 2130837857;
+			// aapt resource value: 0x7F020125
+			public const int txt_partolUser = 2130837797;
 			
 			// aapt resource value: 0x7F020110
-			public const int txt_version = 2130837776;
+			public const int txt_passModify = 2130837776;
+			
+			// aapt resource value: 0x7F020128
+			public const int txt_Time = 2130837800;
+			
+			// aapt resource value: 0x7F020164
+			public const int txt_user = 2130837860;
+			
+			// aapt resource value: 0x7F020161
+			public const int txt_userName = 2130837857;
+			
+			// aapt resource value: 0x7F020162
+			public const int txt_userPhone = 2130837858;
+			
+			// aapt resource value: 0x7F020111
+			public const int txt_version = 2130837777;
 			
 			// aapt resource value: 0x7F0C008B
 			public const int uniform = 2131493003;
@@ -3642,11 +3645,11 @@ namespace FTSAFE
 			// aapt resource value: 0x7F0C008C
 			public const int up = 2131493004;
 			
-			// aapt resource value: 0x7F020106
-			public const int userDeapart = 2130837766;
+			// aapt resource value: 0x7F020107
+			public const int userDeapart = 2130837767;
 			
-			// aapt resource value: 0x7F020105
-			public const int userName = 2130837765;
+			// aapt resource value: 0x7F020106
+			public const int userName = 2130837766;
 			
 			// aapt resource value: 0x7F020012
 			public const int viewPage = 2130837522;

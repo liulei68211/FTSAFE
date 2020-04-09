@@ -106,14 +106,16 @@
 					android:textColor ="#000000"
 					android:textSize = "15sp"
 					android:text="隐患级别" />
-				<Spinner
-					android:id="@+id/spinerLevel"
-					style="@style/Base.Widget.AppCompat.Spinner.Underlined"
-					android:layout_marginLeft="10dp"
-					android:layout_width="wrap_content"
+					<EditText
+					android:gravity="left"
+					android:paddingLeft = "5dp"
 					android:layout_gravity="fill"
-					android:paddingRight="16dp">
-				</Spinner>
+					android:inputType="text"
+					android:textSize="15sp"
+					android:textColor ="#818181"
+					android:enabled="false"
+					android:layout_marginLeft = "10dp"
+					android:id="@+id/editLevel" />
 				<TextView
 					android:layout_height="45dp"
 					android:gravity="center_vertical"
@@ -130,6 +132,19 @@
 					android:layout_marginLeft = "10dp"
 					android:enabled="false"
 					android:id="@+id/txtTime" />
+				<TextView
+					android:layout_height="45dp"
+					android:gravity="center_vertical"
+					 android:textColor ="#000000"
+					android:textSize = "15sp"
+					android:text="隐患所属部门" />
+				<Spinner
+					android:id="@+id/spinnerAdress"
+					style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+					android:layout_marginLeft="10dp"
+					android:layout_gravity="fill"
+					android:paddingRight="16dp">
+				</Spinner>
 				<TextView
 					 android:layout_height="45dp"
 					 android:gravity="center_vertical"

@@ -17,6 +17,7 @@ namespace FTSAFE.CommonClass
     public class XmlDBClass
     {
         public static int accID = 0;
+        public static string accCode = "";
         public static int userID = 0;
         public static int departID = 0;
         public static string departCode = "";

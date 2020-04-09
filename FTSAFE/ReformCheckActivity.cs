@@ -24,7 +24,7 @@ namespace FTSAFE
     /// <summary>
     /// 只有整改单位可以编辑
     /// </summary>
-    [Activity(Label = "整改人信息录入", LaunchMode = Android.Content.PM.LaunchMode.SingleTask)]
+    [Activity(Label = "隐患确认", LaunchMode = Android.Content.PM.LaunchMode.SingleTask)]
     public class ReformCheckActivity : AppCompatActivity
     {  
         private ImageView _imageView;

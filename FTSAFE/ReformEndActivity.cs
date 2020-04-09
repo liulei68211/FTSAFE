@@ -14,7 +14,7 @@ using Java.Net;
 
 namespace FTSAFE
 {
-    [Activity(Label = "整改复查人信息录入", LaunchMode = Android.Content.PM.LaunchMode.SingleTask)]
+    [Activity(Label = "隐患复查", LaunchMode = Android.Content.PM.LaunchMode.SingleTask)]
     public class ReformEndActivity : AppCompatActivity
     {
         private int hidenFlag = 0;
@@ -42,7 +42,6 @@ namespace FTSAFE
             toolbar.SetTitleTextAppearance(this, Resource.Style.Toolbar_TitleText);
             //修改子标题大小
             toolbar.SetSubtitleTextAppearance(this, Resource.Style.Toolbar_SubTitleText);
-
             SetSupportActionBar(toolbar);
             //设置返回按钮
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -83,7 +82,6 @@ namespace FTSAFE
             //提交按钮
              bt_sub = FindViewById<Button>(Resource.Id.btSub);
             bt_sub.Click += btSub_Click;
-
             try
             {
                 Bitmap[] arr = hidenImagAdress();
@@ -207,16 +205,31 @@ namespace FTSAFE
                         edit_result.Text = dt.Rows[0]["abarResult"].ToString();
 
                         int reviewID = Convert.ToInt32(dt.Rows[0]["departID"].ToString());
-                        //判断当前岗位是否为整改单位
-                        if (reviewID != XmlDBClass.departID)
+
+                        #region 判断当前用户是否 有权限复查
+                        bool result = safeWeb.select_isReview(XmlDBClass.accID,XmlDBClass.userID,XmlDBClass.autoID);
+                        if (result == false)
                         {
-                            //不是整改单位 只许看不许操作
+                            //    //不是整改单位 只许看不许操作
                             bt_sub.Enabled = false;
                             // bt_sub.SetBackgroundColor(Color.Gray);
                             bt_sub.SetBackgroundResource(Resource.Drawable.btUnEnable);
                             edit_person_review.Enabled = false;
                             edit_result_review.Enabled = false;
                         }
+                        #endregion
+                        #region 旧的 暂时不用
+                        //判断当前岗位是否为整改单位
+                        //if (reviewID != XmlDBClass.departID)
+                        //{
+                        //    //不是整改单位 只许看不许操作
+                        //    bt_sub.Enabled = false;
+                        //    // bt_sub.SetBackgroundColor(Color.Gray);
+                        //    bt_sub.SetBackgroundResource(Resource.Drawable.btUnEnable);
+                        //    edit_person_review.Enabled = false;
+                        //    edit_result_review.Enabled = false;
+                        //}
+                        #endregion
                     }
                 } 
             }

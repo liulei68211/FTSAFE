@@ -349,6 +349,7 @@ namespace FTSAFE
                     listName.Add("abarRequest");
                     listName.Add("abarTS");//整改期限ts
                     listName.Add("abarbeitungPerson");//整改责任人
+                    listName.Add("iSendHidenPerson");//整改通知单下发人
 
                     listData.Add(currentDepartID.ToString());
                     listData.Add(abarTypeSpinner.SelectedItem.ToString());
@@ -356,6 +357,7 @@ namespace FTSAFE
                     listData.Add(edit_request.Text);
                     listData.Add(string.Format("{0:yyyy-MM-dd HH:mm:ss}", DateTime.Now));
                     listData.Add(spinner_people.SelectedItem.ToString());
+                    listData.Add(XmlDBClass.userID.ToString());
                     //组装xml数据
                     XmlDocument xmldoc = new XmlDocument();
                     XmlNode node = xmldoc.CreateXmlDeclaration("1.0", "GBK", "");
